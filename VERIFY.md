@@ -19,7 +19,7 @@ The full Python verifier also enforces the axiom allowlist, excluding
 | Reproduce the formal checks | The commands below and [verify_artifact.py](verify_artifact.py). |
 | Understand exactly what was proved | The manuscript's Section 2, [StabilizedStatement.lean](artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedStatement.lean), and [HUMAN-CHECK.md](HUMAN-CHECK.md). |
 | Inspect the mathematical proof | [manuscript.pdf](manuscript.pdf), Sections 3–7; Section 8 maps the argument to Lean declarations. |
-| Read the recorded verification evidence | [verification/README.md](verification/README.md) and [verification/2026-10-07/](verification/2026-10-07/). |
+| Read the recorded verification evidence | [verification/README.md](verification/README.md) and the latest [release verification](verification/2026-10-07-release/README.md). |
 | Check research and proof provenance | [PROVENANCE.md](PROVENANCE.md) and [artifact/prior-audit/source_mapping.json](artifact/prior-audit/source_mapping.json). |
 
 ## 1. Run the formal checks yourself
@@ -116,7 +116,7 @@ native-evaluation assumptions require investigation. Lean's official
 explains what `#print axioms` reports.
 
 The repository includes a successful dated run under
-[verification/2026-10-07/](verification/2026-10-07/). Reproducing the checks on
+[verification/2026-10-07-release/](verification/2026-10-07-release/README.md). Reproducing the checks on
 your own installation gives you evidence from your environment. If a command
 fails, inspect its log and exit code; an incomplete output directory is not a
 successful verification record.

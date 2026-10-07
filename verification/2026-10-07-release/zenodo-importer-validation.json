@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-07T16:19:03.509136+00:00",
+  "official_importer_url": "https://github.com/zenodo/zenodo-rdm/blob/9370acc127c643aff4c43c59cf163c2982f3201c/site/zenodo_rdm/legacy/deserializers/metadata.py",
+  "official_importer_commit": "9370acc127c643aff4c43c59cf163c2982f3201c",
+  "official_importer_sha256": "8d31bb2c9422fbda37f3dc05f1cb26f43cffccbfa3c1fa6f8cca31b73d38ac7a",
+  "file_sha256": "cccb9e3ddbb10739d6cbaaa5ac1871bac945ec14c551c65e147b0dbeb4a7e66c",
+  "method": "Executed the unmodified official MetadataSchema in a local Flask application context, with DOI as the only configured related-identifier scheme used by this file.",
+  "dependencies": {
+    "marshmallow": "3.26.2",
+    "marshmallow-utils": "0.15.4",
+    "flask": "3.1.3",
+    "idutils": "1.7.0",
+    "pycountry": "26.2.16"
+  },
+  "validated_fields": [
+    "version",
+    "language",
+    "title",
+    "description",
+    "creators",
+    "creators.orcid",
+    "creators.affiliation",
+    "license",
+    "resource_type",
+    "keywords",
+    "related_identifiers"
+  ],
+  "record_service_or_publication_test_performed": false,
+  "imported_metadata": {
+    "title": "Formal artifact for Amortization collapse for reference stabilized geometric Rényi superchannel divergences",
+    "description": "<p>A reproducible Lean 4 formal verification artifact for reference stabilized nested geometric Rényi superchannel amortization collapse for every real order 1 &lt; α &le; 2. It contains the complete 43-module project proof closure, verification scripts, source manifests, audit records, and supporting documentation. For finite dimensional deterministic physical superchannels, the nested amortized divergence equals the ordinary reference stabilized divergence. The nested quantity corresponds to Hirche's Eq. (39); collapse of the larger fully amortized quantity in Eq. (40) is outside this result.</p><p>This software artifact supplements the separately identified manuscript <em>Amortization collapse for reference stabilized geometric Rényi superchannel divergences</em> by Vinícius Mohr, DOI <a href=\"https://doi.org/10.5281/zenodo.23215121\">10.5281/zenodo.23215121</a>. A manuscript copy and editable sources are included for context; the manuscript has its own Zenodo record.</p><p>The full verifier freshly compiles the project source closure, checks the exact theorem type and an explicit expansion of the optimization domains, audits axioms, and replays the project proofs using the installed Lean kernel. Recorded verification retained pinned external dependency binaries; it did not rebuild or replay those dependencies. Mathematical interpretation of the definitions and external specialist review are separate from these formal checks.</p><p>Vinícius Mohr initiated and directed AI agents to attempt QIQCOP Zoo problems using lean-orchestrator, which was built using Claude Opus 5.5. Research and proofs were developed jointly by GPT-6.1-Sol and Claude Opus 5.5 agents. The inspected configuration assigns research, supervision, literature, and triage to GPT-6.1-Sol and the critic role to Claude Opus 5.5, which also contributed substantive proof material. GPT-6.1-Sol wrote the manuscript. Agent roles and proof provenance are documented in PROVENANCE.md; the manuscript gives the fuller contribution and AI disclosure statement.</p><p>Project code, manuscript, and associated publication material are licensed under MIT. External dependencies retain their respective licenses.</p>",
+    "publication_date": "2026-10-07",
+    "creators": [
+      {
+        "person_or_org": {
+          "type": "personal",
+          "identifiers": [
+            {
+              "scheme": "orcid",
+              "identifier": "0009-0001-9239-5673"
+            }
+          ],
+          "given_name": "Vinícius",
+          "family_name": "Mohr"
+        },
+        "affiliations": [
+          {
+            "name": "Institute for Theoretical Physics, ETH Zurich, 8093 Zurich, Switzerland"
+          }
+        ]
+      }
+    ],
+    "publisher": "Zenodo",
+    "rights": [
+      {
+        "id": "mit"
+      }
+    ],
+    "subjects": [
+      {
+        "subject": "quantum information"
+      },
+      {
+        "subject": "superchannels"
+      },
+      {
+        "subject": "geometric Rényi divergence"
+      },
+      {
+        "subject": "amortization collapse"
+      },
+      {
+        "subject": "Lean 4"
+      },
+      {
+        "subject": "formal verification"
+      }
+    ],
+    "version": "1.0.0",
+    "related_identifiers": [
+      {
+        "identifier": "10.5281/zenodo.23215121",
+        "scheme": "doi",
+        "relation_type": {
+          "id": "issupplementto"
+        },
+        "resource_type": {
+          "id": "publication-preprint"
+        }
+      }
+    ],
+    "resource_type": {
+      "id": "software"
+    },
+    "languages": [
+      {
+        "id": "eng"
+      }
+    ]
+  }
+}

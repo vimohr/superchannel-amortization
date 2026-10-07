@@ -1,0 +1,29 @@
+{
+  "actions/checkout@v7": {
+    "url": "https://api.github.com/repos/actions/checkout/git/ref/tags/v7",
+    "ref": "refs/tags/v7",
+    "object": {
+      "sha": "3d3c42e5aac5ba805825da76410c181273ba90b1",
+      "type": "commit",
+      "url": "https://api.github.com/repos/actions/checkout/git/commits/3d3c42e5aac5ba805825da76410c181273ba90b1"
+    }
+  },
+  "actions/upload-artifact@v7": {
+    "url": "https://api.github.com/repos/actions/upload-artifact/git/ref/tags/v7",
+    "ref": "refs/tags/v7",
+    "object": {
+      "sha": "cf430e030ddbb5b0abf93d22962f4752f3646cd9",
+      "type": "commit",
+      "url": "https://api.github.com/repos/actions/upload-artifact/git/commits/cf430e030ddbb5b0abf93d22962f4752f3646cd9"
+    }
+  },
+  "leanprover/lean-action@v1": {
+    "url": "https://api.github.com/repos/leanprover/lean-action/git/ref/tags/v1",
+    "ref": "refs/tags/v1",
+    "object": {
+      "sha": "f061402b660e0c34644504b324e830f2991d4865",
+      "type": "commit",
+      "url": "https://api.github.com/repos/leanprover/lean-action/git/commits/f061402b660e0c34644504b324e830f2991d4865"
+    }
+  }
+}

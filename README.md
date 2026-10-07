@@ -9,6 +9,8 @@ divergence equals the reference stabilized ordinary divergence.
 
 **Manuscript DOI:** [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121).
 
+**Author:** Vinícius Mohr · [ORCID: 0009-0001-9239-5673](https://orcid.org/0009-0001-9239-5673).
+
 ## Result and scope
 
 The equality concerns arbitrary joint CPTP insertions `AR → BR`, with the
@@ -194,7 +196,7 @@ the final manuscript. This lets the paper cite an immutable proof snapshot.
    Zenodo preprint draft for the final PDF upload in step 5.
 2. Link GitHub to Zenodo and enable this repository in Zenodo's GitHub settings
    **before** publishing a release. Review `.zenodo.json` for the software
-   title, human creator, ETH Zurich affiliation, MIT license, and AI disclosure.
+   title, human creator, ORCID, ETH Zurich affiliation, MIT license, and AI disclosure.
    Zenodo uses this file in preference to `CITATION.cff`; keep their shared
    metadata consistent. Leave `doi` out of `.zenodo.json` so Zenodo assigns a
    DOI to each new software version. `CITATION.cff`, `.zenodo.json`, and
@@ -235,8 +237,9 @@ and [record versions](https://help.zenodo.org/docs/deposit/manage-versions/).
 - Check that `CITATION.cff`, `.zenodo.json`, and `release-manifest.json` all
   say `1.0.0`, and that the intended tag is `v1.0.0`. Update all three
   version fields together for subsequent releases.
-- Check the human creator name, ETH Zurich affiliation, MIT license,
-  manuscript DOI `10.5281/zenodo.23215121`, and the `isSupplementTo` link.
+- Check the human creator name, ORCID `0009-0001-9239-5673`, ETH Zurich
+  affiliation, MIT license, manuscript DOI `10.5281/zenodo.23215121`, and
+  the `isSupplementTo` link.
   The manuscript DOI belongs to the paper. The software DOI is added after
   the GitHub-integrated archive exists.
 - Review the release description's Eq. (39) scope, its Eq. (40) exclusion,

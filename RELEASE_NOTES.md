@@ -2,7 +2,7 @@
 
 Frozen formal verification artifact accompanying the manuscript
 “Amortization collapse for reference stabilized geometric Rényi superchannel
-divergences” by Vinícius Mohr, manuscript DOI
+divergences” by [Vinícius Mohr](https://orcid.org/0009-0001-9239-5673), manuscript DOI
 [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121).
 
 For finite dimensional deterministic physical superchannels and every real
@@ -42,7 +42,7 @@ are distinct tasks, and external specialist review remains pending.
 Vinícius Mohr initiated and directed the automated research. GPT-6.1-Sol and
 Claude Opus 5.5 agents jointly developed the research and proofs;
 GPT-6.1-Sol wrote the manuscript. The detailed contribution and AI disclosure
-is in the manuscript and provenance record. The human creator and affiliation
+is in the manuscript and provenance record. The human creator, affiliation, and ORCID
 are recorded in the citation and archive metadata.
 
 Project code and original associated publication material use the MIT License.

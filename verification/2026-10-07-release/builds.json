@@ -1,0 +1,862 @@
+[
+  {
+    "module": "OpenQ.Foundations.Basic",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Foundations/Basic.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Foundations/Basic.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.88,
+    "log": "logs/OpenQ.Foundations.Basic.log",
+    "log_sha256": "8526f88e2d6bf80666de639fcfe323375c45844ef056a30f9349a4cf188f6764",
+    "olean_sha256": "0c1f0da14ee84c374cdef446f3ea8c4ba6c77927505627159dbd9f55808e74ad"
+  },
+  {
+    "module": "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.Statement",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/Statement.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/Statement.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.661,
+    "log": "logs/OpenQ.Problems.EqualWeightLowChoiRank_523ed7.Statement.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "0274eafbc80dbc30efd00af6620720514a03f03385df10afdb83e57f00194e9e"
+  },
+  {
+    "module": "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChoiCorrespondence",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/ChoiCorrespondence.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/ChoiCorrespondence.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.183,
+    "log": "logs/OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChoiCorrespondence.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "e4484fe189095e73a97cd1285e7662deaee8931b0fa2720851d0ab1a9073d807"
+  },
+  {
+    "module": "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChannelCorrespondence",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/ChannelCorrespondence.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/ChannelCorrespondence.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.283,
+    "log": "logs/OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChannelCorrespondence.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "1f11191a89607fe212cdbcfeebae501e6e85f7331cfd462e1d4225ecb13adfbe"
+  },
+  {
+    "module": "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.PreparationCircuit",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/MultiSlotOverheadVirtualChannel_06e9f0/PreparationCircuit.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/MultiSlotOverheadVirtualChannel_06e9f0/PreparationCircuit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.476,
+    "log": "logs/OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.PreparationCircuit.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "60b12e445076099c625dc60afc1e0bc438f30d5210c3a85a7390e2f0d455fa7d"
+  },
+  {
+    "module": "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.GeneralCircuit",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/MultiSlotOverheadVirtualChannel_06e9f0/GeneralCircuit.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/MultiSlotOverheadVirtualChannel_06e9f0/GeneralCircuit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.14,
+    "log": "logs/OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.GeneralCircuit.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "29b07b83ba121bc2f4e3473f66f46a42b4722df6d6978e8f3c7e09a8f375a4e1"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Statement",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/Statement.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/Statement.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.992,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Statement.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "4f7a7db80287d9e9d263b3df8d88602492b01ba4cb74e7e32f2eae8ec90be633"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.BasicBounds",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/BasicBounds.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/BasicBounds.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.611,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.BasicBounds.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "adc2d92aca617a4c20f8ad129b8051c5ab4760fb02e2ec64ce0f2b3c13598bac"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofSpectral",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofSpectral.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofSpectral.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.005,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofSpectral.log",
+    "log_sha256": "451a55bf852498e04ec81a37cb5f73849c8ea074f3ee80ea440cdfb629972507",
+    "olean_sha256": "5e0164fccbf6172f6e2363ebedbf6b80cd352a83cf858a612f235e93f0313ca8"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofDivergence.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofDivergence.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.467,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence.log",
+    "log_sha256": "62bcfa8604fe334c9aafe81b5430106d4120f878bc5d4b6b57b3ad55c541be1c",
+    "olean_sha256": "8a63213f9f0de1c2e4fa3a24ce678e762b928078bc9fe62b2caac0e2016b4bb5"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofKnown.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofKnown.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.093,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "0536ac0f4c33efd76f12b390514227b388b60ee6c698d54ed8360a57e15d16c8"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofDom.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofDom.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.48,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "b334cafb61f0dd99e3ac52d4e0e8ac72a8b75ebbeabac8925b34cab69d1d12cb"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedAction",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedAction.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedAction.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.852,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedAction.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "8e085476feedf13b773a6e65e30d89e38f7511b04c4e3362aed2cd1b9867d043"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedStatement",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedStatement.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedStatement.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.705,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedStatement.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "b1545bb7ee1b4437979de06b27c931cf8583e224b2f0509872ff5e987712425b"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofComb.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofComb.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 15.478,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "d90429d8c174197c34a57f886c1ad079bfc9fd715fc990089b02d1c549dd5a19"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofSums.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofSums.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.963,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "c16f5c344890224e2e1bb4e968958d3b4b91fb65f8db3883004e70d5d81ce1b4"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.RegularCombAlgebra",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/RegularCombAlgebra.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/RegularCombAlgebra.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.136,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.RegularCombAlgebra.log",
+    "log_sha256": "21fde1c1548f6f66b6e50f4129e3c58fcfbee28124f04d2699ec4aa7e19d89ba",
+    "olean_sha256": "b862bdc07f761305169dac5128ba236e55752ce638f75e77e1a759fcb114f7f7"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofQubitMoment",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofQubitMoment.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofQubitMoment.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.646,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofQubitMoment.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "e2ad9dde2debadcdb3477d1db72f7cbd41ca9075101237d639ec3e93ee98534b"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofBloch",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofBloch.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofBloch.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 6.333,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofBloch.log",
+    "log_sha256": "5e52de0c61edee067259122a7d5abd9a1732775ebc33dad721c270eaaed1e558",
+    "olean_sha256": "8cfb71bbb52b6662a69bd98fc36da15e17305c15ad882ac193d2e5e62ca51777"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofScalar",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofScalar.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofScalar.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 10.134,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofScalar.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "7fae7e374b3f225370360ee6e671fba429c04e67a2ded3409bf6775405d84bd2"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPureBound",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofPureBound.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofPureBound.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 13.409,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPureBound.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "829cb8a44fa1bf390799cb746935f3e097ef9071339b90af80bb5fd4e8bf9576"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofConvex",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofConvex.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofConvex.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 8.048,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofConvex.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "b990c1e62f0506db9ba57a81dc52f5548de6045fed3a9a3493177d7de7e740bd"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofMixedBound",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofMixedBound.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofMixedBound.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 6.916,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofMixedBound.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "1ad4f689b96c4ec9917c051cceb5ceab150d28e3535af62bdcefb98cc2e12124"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofChannelBound",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofChannelBound.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofChannelBound.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 7.732,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofChannelBound.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "0fc0dfcaec50f349e613ea9ba099a1a356f8d6b4ae793e3c9f5176fe0bffe289"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofLiteral",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofLiteral.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofLiteral.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.362,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofLiteral.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "b0da463436c701944f333c19e8090a60247bd4f72cfaabef8a91fa033badc6ce"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofNonnegative",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofNonnegative.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofNonnegative.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.939,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofNonnegative.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "950895d51c5a71ff78679a8e67393999dcd84d63f44899f6d08055880a99dd91"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPreparation",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofPreparation.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofPreparation.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.134,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPreparation.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "afbd8ac43069d2df83b99986ca0081a79c960a1f2e9eb56f67e514a33a45b965"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofOrthogonal",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofOrthogonal.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofOrthogonal.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.579,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofOrthogonal.log",
+    "log_sha256": "35f226829ecda7e5b422c0ddb2d062e018d081197875ec27f4be9462011cb1fb",
+    "olean_sha256": "6144b79217902cd719c1ff53f8156d36d40bffeb0f70e87547bc51429d0d40ce"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofTester.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofTester.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.621,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "0d0e2daa32eeebebed8d1381b2a99276318a6fd85fe1a58a24e1a8276cd3689a"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofTrivial",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofTrivial.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofTrivial.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.853,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofTrivial.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "9575ea87a16ce74f7251b4cfdff9f7bbf341316b978aa25d03dc4ecf11efabb5"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannel.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannel.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 6.307,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel.log",
+    "log_sha256": "4c90f8e1d96cbd54185487c912823791c28d17cc9f8aaf3bec7845334574d27e",
+    "olean_sha256": "d1e166ad34f77db31c1a291f8c60ca91add1d827db262de9bc7a607c3e19bec4"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofReindex.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofReindex.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.805,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "7fbadbd0b6669d08e8b2033a35af86799e95453ce026ff198d8cc36746e8b0f1"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofUpper.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofUpper.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.104,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "756ed0d3590b8e6a30991f01e319acb27e65ead25b9667377d79a4c3fec03c04"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.663,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize.log",
+    "log_sha256": "c9090e6ec0a8ba4b17e8122df1ee89dc4fc2c7b3701cf6a86a481930b33c6083",
+    "olean_sha256": "de6cbe94928cafc43300c3c600905de45728687d460925780a36405379d92b7d"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwo.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwo.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.51,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "27df8bff85e2973966ab330d848db623bdee527d0c542235ad7eea75de575b71"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofLiteral.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofLiteral.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.382,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "485e6a7d8962343cde1365f02c55584cbe831b4ded06887fcffcb6076c4e3711"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannelValue.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannelValue.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.049,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "65ff36c8565c469f421acba49f2d63bf9b9f0d8a3ba136e1ac64d2cc7399a3f1"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlpha.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlpha.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.774,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha.log",
+    "log_sha256": "a63960bd685bdd2134ca71d88cdb3f63e513d0f4b371e768eccd187a49352bcb",
+    "olean_sha256": "64ce0b568a85ae2ea4925ca9cf10f235b207bf47341bcc8e040688e8c8ad23d0"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaChain.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaChain.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.014,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "c1eeb37763b20a972b6322530899bb34616e43c5c1034f80277cf3080fdaf06c"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwoClaims.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwoClaims.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.713,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims.log",
+    "log_sha256": "f2e087fb83a1dd773cbdcff643cfdae903a0a968a6c981199dba89467258e228",
+    "olean_sha256": "55317bbba30de69c73d9bc03a429e86bfac492fa015c94ab5988def16d8d7282"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofNonvacuous.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofNonvacuous.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.025,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous.log",
+    "log_sha256": "3dac50e0ac339d43add07b238ffcb94376bfca96422fd661bd2be716a82eb0ed",
+    "olean_sha256": "4a912468da76d401da4b65f6371d47f6d8802a5d2fa047363d87cebf6f4a3770"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaMain.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaMain.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.882,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "9263685f89842ca92138ae2b91694e2339e1a12b3065184f67411dcb6552cf17"
+  },
+  {
+    "module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedCollapse",
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean",
+      "-o",
+      "/tmp/superchannel-release-check-hecynj6_/formal/fresh/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedCollapse.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedCollapse.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 4.488,
+    "log": "logs/OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedCollapse.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "olean_sha256": "bfece0cea8215d9548426fcaa24fd655163753a8de86bcfd345c8cf771d9b04c"
+  }
+]

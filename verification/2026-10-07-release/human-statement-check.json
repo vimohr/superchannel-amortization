@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+    "-DautoImplicit=false",
+    "-DrelaxedAutoImplicit=false",
+    "-DmaxSynthPendingDepth=3",
+    "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/ReadStatement.lean"
+  ],
+  "exit_code": 0,
+  "seconds": 4.453,
+  "fresh_project_closure": true,
+  "log": "human-statement.log",
+  "log_sha256": "a669442fcfca1993449eea4b1bc182f298ec5eb1299ccd2228b4073f86a15e54"
+}

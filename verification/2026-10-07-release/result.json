@@ -1,0 +1,9 @@
+{
+  "module_count": 43,
+  "fresh_source_build": true,
+  "exact_type_and_axioms": true,
+  "kernel_replay": true,
+  "source_unchanged": true,
+  "external_packages_rebuilt_or_replayed": false,
+  "frozen_artifact": true
+}

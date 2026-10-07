@@ -1,0 +1,61 @@
+{
+  "local_documentation_links_checked": 72,
+  "local_documentation_links_passed": true,
+  "workflow_yaml_and_embedded_syntax_passed": true,
+  "workflow_run_steps": [
+    "Check frozen project source hashes",
+    "Print definitions and check the exact theorem type",
+    "Enforce the axiom allowlist",
+    "Run fresh compilation and kernel replay"
+  ],
+  "external_actions": [
+    "actions/checkout@v7",
+    "leanprover/lean-action@v1",
+    "actions/upload-artifact@v7"
+  ],
+  "hosted_workflow_run_performed": false,
+  "workflow_source_hash_and_axiom_commands_executed": [
+    "Check frozen project source hashes",
+    "Enforce the axiom allowlist"
+  ],
+  "axiom_command_used_newly_compiled_audit": true,
+  "workflow_action_tags_resolve": true,
+  "workflow_action_tag_evidence": "action-tags.json",
+  "workflow_axiom_result": {
+    "exact_type_and_expansion": true,
+    "axiom_blocks": [
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    ],
+    "fresh_source_build": false,
+    "kernel_replay": false
+  }
+}

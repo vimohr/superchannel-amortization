@@ -169,3 +169,50 @@ generated proof binaries excluded. No common private-key or access-token
 patterns were found in the assembled publication files. Historical
 absolute environment paths and preparation wording are retained as
 provenance rather than rewritten or treated as current release status.
+
+Author ORCID added, 7 October 2026
+
+The author supplied ORCID 0009-0001-9239-5673. Its identifier checksum
+was validated locally. The manuscript author block links the ORCID record;
+CITATION.cff includes it for both the software creator and the preferred
+manuscript citation, and .zenodo.json includes it in the creator metadata.
+The README, release notes, and release manifest also record the identifier.
+These are local publication-file updates; no remote account metadata was
+changed. The PDF rebuilt without warnings, and the author block was
+visually inspected. All frozen Lean sources, verification helpers, and
+historical proof-audit records remain unchanged. Release file hashes and
+source archive checksums were refreshed.
+
+Complete local release verification, 7 October 2026
+
+CITATION.cff passed the official schema 1.2.0 and cffconvert 2.0.0.
+The complete .zenodo.json passed Zenodo-RDM's unmodified current metadata
+deserializer, preserving the author ORCID, MIT license, software version,
+English language, and isSupplementTo link to the paper DOI. The legacy
+JSON Schema linked by Zenodo omits version and language despite their
+documented support; its core-field validation and this discrepancy are
+recorded alongside the successful current importer test. No metadata
+field needed removal. Shared author, affiliation, version, license, and
+paper DOI metadata are consistent.
+
+All 43 frozen project modules were freshly compiled, the exact closed
+theorem type and explicit statement expansion were checked, all six
+axiom reports stayed within propext, Classical.choice, and Quot.sound,
+and installed Lean kernel replay passed. ReadStatement.lean passed
+against the new closure. This run reused clean, pinned external package
+binaries and excluded the provider's project proof caches.
+
+The current manuscript, including the author's revised DOI label, rebuilt
+without warnings. Its author identity, ORCID, affiliation, paper DOI,
+AI attribution, extracted text, and title-page layout were checked.
+Local documentation links, workflow YAML and embedded code syntax, public
+action tags, and the workflow source-hash and axiom commands passed.
+The workflow axiom command used the newly compiled proof audit.
+
+Fresh text evidence is saved under verification/2026-10-07-release/.
+The proof sources, verifier, audit helpers, and earlier proof-verification
+records remain unchanged. File hashes and source archives were refreshed
+after incorporating the new records and current metadata edits.
+The local tests do not represent a GitHub-hosted workflow, independent
+dependency bootstrap, remote Zenodo record-service test, or publication.
+External dependencies were not rebuilt or replayed.

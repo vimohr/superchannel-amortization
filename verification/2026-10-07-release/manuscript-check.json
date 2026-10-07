@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "warnings": [],
+  "title_page_orcid_checked": true,
+  "doi_checked": true,
+  "author_affiliation_checked": true,
+  "ai_attribution_present": true,
+  "pdf_sha256": "47c23c81653107c7881254ee2b6cf022653bfdf3ea7f4d3aa5630fe93bccca1b",
+  "source_sha256": "7de6f9761939237adb4cdaf648336668bfa283bc461dd397751f2e7ff0c9809f"
+}
