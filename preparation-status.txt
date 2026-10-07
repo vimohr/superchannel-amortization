@@ -125,3 +125,17 @@ The current manuscript uses \today and its rebuilt PDF displays 7 October
 2026. The LaTeX build completed without warnings; extracted paper text matches
 the preceding version apart from the title-page date. Historical preparation
 and proof-verification dates remain recorded under their original dates.
+
+Manuscript DOI supplied, 7 October 2026
+
+The author supplied 10.5281/zenodo.23215121 as the paper DOI. It appears
+beneath the title-page date and in the manuscript availability paragraph.
+The repository README links it, CITATION.cff uses it in the paper
+preferred-citation, and .zenodo.json records the software artifact as
+isSupplementTo that paper. The software archive DOI remains pending in
+the metadata; the paper DOI is not assigned to the software record.
+The public paper record could not be confirmed through the web tool;
+this update records the author-provided identifier without asserting
+that the Zenodo deposit has been published. The PDF rebuilt without
+warnings, its DOI text and layout were inspected, and source archive
+checksums were refreshed. All frozen Lean sources retain their hashes.

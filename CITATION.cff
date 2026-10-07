@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying manuscript and the exact archived artifact version. The manuscript and PROVENANCE.md describe the AI contributions."
+message: "Please cite the manuscript listed under preferred-citation and the exact archived artifact version when available. The manuscript and PROVENANCE.md describe the AI contributions."
 type: software
 title: "Formal artifact for Amortization collapse for reference stabilized geometric Rényi superchannel divergences"
 version: "1.0.0-draft"
@@ -17,3 +17,13 @@ keywords:
   - geometric Rényi divergence
   - amortization collapse
   - Lean 4
+preferred-citation:
+  type: article
+  title: "Amortization collapse for reference stabilized geometric Rényi superchannel divergences"
+  authors:
+    - family-names: Mohr
+      given-names: Vinícius
+      affiliation: "Institute for Theoretical Physics, ETH Zurich, 8093 Zurich, Switzerland"
+  doi: "10.5281/zenodo.23215121"
+  url: "https://doi.org/10.5281/zenodo.23215121"
+  year: 2026

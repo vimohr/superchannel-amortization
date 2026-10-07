@@ -1,7 +1,7 @@
 {
   "release": "superchannel-amortization-v1",
   "version": "1.0.0-draft",
-  "assembled_utc": "2026-10-07T14:18:46.918120+00:00",
+  "assembled_utc": "2026-10-07T15:04:30.653943+00:00",
   "manuscript_prepared": "2026-10-05",
   "disclosure_revised": "2026-10-07",
   "author": "Vinícius Mohr",
@@ -39,12 +39,12 @@
     ".gitattributes": "a087fbfd7ed82b6697ad4786f708306ce219c053bc405ee361a69725e9396007",
     ".github/workflows/lean.yml": "91807814686690011e42d286d47a8216b88648fb8a357c39f0562092971fb1d4",
     ".gitignore": "76ef0072c38e069bb822178f62565094242122baa31942dfc923e6ed9592b9b6",
-    ".zenodo.json": "2703b0edccb8e94b933561d5ba14a5457aaec636b234065f8919fc38dee6e014",
-    "CITATION.cff": "e80e3545026a8f9fe3e70ddb6864e116f7b238f89d058c2900b7fb54a3d89fbc",
+    ".zenodo.json": "2e6b3f07aef2094d6a75744e9b7734c40f8e0a7fb0a6ee49e4831a8c90fa897e",
+    "CITATION.cff": "d62d836230cad239f43c4070d1e5478d5c66ee38105f64dbbde851bd0c2b9567",
     "HUMAN-CHECK.md": "e921e5695cebb7c800c39d2b3ab0cb0969f6656cdd43399feaade59eabd512f3",
     "LICENSE": "2071f7b8e0b8c30e4c39a15db622403d91aab05083cbac5dfd06841031e74ca9",
     "PROVENANCE.md": "f832c6145ba675d3a9415ed2e144a3648d24b70e0ccb6fca754ef9dc8ef2792f",
-    "README.md": "b13748e71a4f74799c8f0fc9ce336513fbb53a68bad1b1291ec0d5b4e8e031a3",
+    "README.md": "6ae3ac6b49fecb131fa72cba8f3972b5c274553d4b60af2a26a62ebe0374f025",
     "REVIEW.txt": "e9c6e1d257334f7d4fb3be28e9bc439ebb7d8d832dcc3f3768bb17b05d7b7421",
     "RIGHTS.txt": "e8f64758d3497e89f722c65e5c139865b25a9121edd199a7855887d6ec7d4715",
     "VERIFY.md": "464abe3a219a83d06d247240020091a9dc63bd6983bf6074d09e02b75463dd8c",
@@ -163,9 +163,9 @@
     "comparison.csv": "fdf7bf2622cdcc58193b09f2b95e1cbfade88718e27a3a2afdcac45898c969c9",
     "literature.json": "cc4828425f5f061a327fe8cb4b30222e22f1943d0c95ec5db9de2a97429382f2",
     "manuscript.bbl": "b6e7ddb26f5e541eb19349b632c6794d6ccc8f16d351ace75b01625eb749ed88",
-    "manuscript.pdf": "144783f159a03e72214c7ba3091f25491ea493487288752f45646a94227c2b47",
-    "manuscript.tex": "0893b7e55c2c903383d417ace0fe7c451fb799d36e86365fe7d132dea670bf55",
-    "preparation-status.txt": "8f8ff557569a8e1fbe51a5c8db02ac32338fa15948d6704debbc76c4c286c12e",
+    "manuscript.pdf": "fae2401d5b2768b829fd673aa504856a23844a77c374baab975cc38926d86bdb",
+    "manuscript.tex": "7b390d3c6ca40861867b603fd2a5e8566ffc5b029e13a52f487e06b375e25ede",
+    "preparation-status.txt": "1ce470d31222639cd9cc611280f8769294fa9fa72e024fe6e82c5e7a2fe1bffa",
     "provenance/agents-2026-10-07.toml": "c3f290410acdf1bb79b4273da3979703a20c8b8bb8397a4d8d799b624ad106eb",
     "publication-plan.md": "c28c11cafdba15d64f90b84d079e6ff6a785ffc71c956401b8e76c88ae279d1e",
     "references.bib": "ec02af497626bc57bd242c622728732b946cc3eea9a7ea2c655769c3c30d0da4",
@@ -278,7 +278,7 @@
     "verification/README.md": "13eba032e103ed533dc8f8c0bf1f4c7da9b53b46e951591706fd273e1a41679b",
     "verification/human-statement-check.json": "9e64c118c4bc6b29d28fd90ba80c915bfadcdb14a9868b2ec83553d297e3bb8f",
     "verification/human-statement.log": "a669442fcfca1993449eea4b1bc182f298ec5eb1299ccd2228b4073f86a15e54",
-    "verification/manuscript-build.log": "20180b016e3aa5880efd09f647a1301aec1ba285a86756df3dadc51f80ebcf61",
+    "verification/manuscript-build.log": "34635d11231d88b550c95712af4f2e13ce873366bc2d05ed1959ae8c3dd9fe9d",
     "verify_artifact.py": "6c4ab4287369f3b8a9cdbc1c9d969d7e22ce5e00378bd19da6078694aec1039d"
   },
   "license": "MIT",
@@ -294,5 +294,7 @@
     "software": "GitHub–Zenodo integration",
     "manuscript": "Separate Zenodo preprint record"
   },
-  "manuscript_date": "2026-10-07"
+  "manuscript_date": "2026-10-07",
+  "manuscript_doi": "10.5281/zenodo.23215121",
+  "manuscript_doi_url": "https://doi.org/10.5281/zenodo.23215121"
 }

@@ -10,6 +10,14 @@
       "affiliation": "Institute for Theoretical Physics, ETH Zurich, 8093 Zurich, Switzerland"
     }
   ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23215121",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    }
+  ],
   "description": "<p>Standalone Lean 4 formal proof artifact accompanying the manuscript <em>Amortization collapse for reference stabilized geometric Rényi superchannel divergences</em> by Vinícius Mohr. For finite dimensional deterministic physical superchannels and every real order 1 &lt; alpha &le; 2, the reference stabilized nested amortized geometric Rényi divergence equals the ordinary reference stabilized divergence. The nested quantity corresponds to Hirche's Eq. (39); collapse of the larger fully amortized quantity in Eq. (40) is outside this result.</p><p>The repository includes the manuscript and editable sources, all 43 required project proof modules, pinned dependencies, verification instructions, provenance, and dated verification records. The full verifier freshly compiles the project source closure, checks the exact theorem type and an explicit expansion of the optimization domains, audits axioms, and replays the project proofs using the installed Lean kernel. Recorded verification retained pinned external dependency binaries; it did not rebuild or replay those dependencies. Mathematical interpretation of the definitions and external specialist review are separate from these formal checks.</p><p>Vinícius Mohr directed AI agents to attempt QIQCOP Zoo problems using lean-orchestrator, which was built using Claude Opus 5.5. Research and proofs were developed jointly by GPT-6.1-Sol and Claude Opus 5.5 agents. The inspected configuration assigns research, supervision, literature, and triage to GPT-6.1-Sol and the critic role to Claude Opus 5.5, which also contributed substantive proof material. GPT-6.1-Sol wrote the manuscript. The manuscript and PROVENANCE.md document these contributions.</p><p>Project code, manuscript, and associated publication material are licensed under MIT. External dependencies retain their respective licenses.</p>",
   "keywords": [
     "quantum information",

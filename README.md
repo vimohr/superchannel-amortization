@@ -7,6 +7,8 @@ divergence equals the reference stabilized ordinary divergence.
 [Read the manuscript](manuscript.pdf) · [Verify the artifact](VERIFY.md) ·
 [Review the definitions](HUMAN-CHECK.md) · [Public source repository](https://github.com/vimohr/superchannel-amortization)
 
+**Manuscript DOI:** [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121).
+
 ## Result and scope
 
 The equality concerns arbitrary joint CPTP insertions `AR → BR`, with the
@@ -175,15 +177,19 @@ The public source repository is
 [vimohr/superchannel-amortization](https://github.com/vimohr/superchannel-amortization).
 The manuscript was first prepared on 5 October 2026; the current PDF is dated
 7 October 2026.
-The current metadata version is `1.0.0-draft`; no tagged archival release or
-DOI is claimed. The recommended publication setup uses two records: a
+The manuscript DOI is
+[10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121), supplied by
+the author on 7 October 2026. The current software metadata version is
+`1.0.0-draft`; a tagged software archive and its DOI remain pending.
+This GitHub repository contains both the paper and the proof artifact.
+The recommended Zenodo setup uses two records: a
 GitHub-integrated **software artifact** and a separate **preprint** containing
 the final manuscript. This lets the paper cite an immutable proof snapshot.
 
-1. Create a manual Zenodo preprint draft and reserve its DOI. That identifier
-   belongs to the paper. If desired, add it to the manuscript before final
-   upload, and add it as an `isSupplementTo` related identifier in
-   `.zenodo.json` using `scheme: doi` and `resource_type: publication-preprint`.
+1. The paper identifier is already recorded in the manuscript and under
+   `preferred-citation` in `CITATION.cff`. `.zenodo.json` links the software
+   artifact to that paper DOI through `isSupplementTo`. Use the corresponding
+   Zenodo preprint draft for the final PDF upload in step 5.
 2. Link GitHub to Zenodo and enable this repository in Zenodo's GitHub settings
    **before** publishing a release. Review `.zenodo.json` for the software
    title, human creator, ETH Zurich affiliation, MIT license, and AI disclosure.
@@ -201,7 +207,7 @@ the final manuscript. This lets the paper cite an immutable proof snapshot.
    Wait for processing, inspect the archived files and metadata, and copy the
    **specific software-version DOI** into the paper's availability paragraph.
    Retain the matching tag or commit there as an additional source locator.
-5. Rebuild and upload the final PDF to the reserved preprint record, link the
+5. Rebuild and upload the final PDF to the paper's preprint draft, link the
    software DOI there as `isSupplementedBy`, and publish the preprint. Update
    the repository's availability links and CFF software DOI with the actual
    identifiers. The manuscript copy in the first code archive may precede
