@@ -139,3 +139,33 @@ this update records the author-provided identifier without asserting
 that the Zenodo deposit has been published. The PDF rebuilt without
 warnings, its DOI text and layout were inspected, and source archive
 checksums were refreshed. All frozen Lean sources retain their hashes.
+
+Version 1.0.0 release preparation, 7 October 2026
+
+REPOSITORY_ZENODO_PRERELEASE_SUGGESTIONS.md was assessed against the
+current publication files. The repository links, precise theorem
+terminology, scope distinction, mathematical inspection map, trust
+boundaries, AI provenance, and CI were already present. Metadata is now
+prepared as software version 1.0.0 in CITATION.cff, .zenodo.json, and
+the release manifest, with intended tag v1.0.0. Artifact descriptions
+focus on the formal proof closure, scripts, manifests, and audit records;
+the manuscript remains a separately cited work with its provided DOI.
+RELEASE_NOTES.md supplies a reviewable GitHub Release description.
+The README includes the updated release sequence and checks before tagging.
+No release date, software DOI, published tag, or hosted CI success has
+been asserted by this preparation update. The About description/topics
+are ready to apply through the owner's GitHub account; no GitHub write
+connector is available here. Badges remain optional after actual results.
+
+JSON/CFF/version/creator/license/DOI consistency, release scope, local
+documentation links, and all 43 frozen proof-source hashes passed local
+checks. The root verifier and historical audit records remain unchanged.
+No new Lean compilation or kernel replay was required by these metadata
+edits; the dated audit records identify the same frozen source hashes.
+The README still calls for the documented full verifier on the intended
+release commit before tagging. Release manifests and archives were
+refreshed, with Git metadata, dependency caches, temporary outputs, and
+generated proof binaries excluded. No common private-key or access-token
+patterns were found in the assembled publication files. Historical
+absolute environment paths and preparation wording are retained as
+provenance rather than rewritten or treated as current release status.

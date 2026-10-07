@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the manuscript listed under preferred-citation and the exact archived artifact version when available. The manuscript and PROVENANCE.md describe the AI contributions."
 type: software
 title: "Formal artifact for Amortization collapse for reference stabilized geometric Rényi superchannel divergences"
-version: "1.0.0-draft"
+version: "1.0.0"
 license: MIT
 repository-code: "https://github.com/vimohr/superchannel-amortization"
 url: "https://github.com/vimohr/superchannel-amortization"
@@ -10,7 +10,7 @@ authors:
   - family-names: Mohr
     given-names: Vinícius
     affiliation: "Institute for Theoretical Physics, ETH Zurich, 8093 Zurich, Switzerland"
-abstract: "A standalone Lean 4 source artifact and manuscript for reference stabilized nested geometric Rényi superchannel amortization collapse for every real order 1 < alpha <= 2. The research and proofs were developed jointly by GPT-6.1-Sol and Claude Opus 5.5 agents in automated research initiated by Vinícius Mohr. GPT-6.1-Sol wrote the manuscript."
+abstract: "A reproducible Lean 4 formal verification artifact for reference stabilized nested geometric Rényi superchannel amortization collapse for every real order 1 < alpha <= 2. It contains the complete 43-module project proof closure, verification scripts, source manifests, audit records, and supporting documentation. The result concerns Hirche's Eq. (39); collapse of the larger fully amortized quantity in Eq. (40) is outside its scope. The research and proofs were developed jointly by GPT-6.1-Sol and Claude Opus 5.5 agents in automated research initiated and directed by Vinícius Mohr. Agent roles and proof provenance are documented in PROVENANCE.md. GPT-6.1-Sol wrote the accompanying manuscript, which is cited separately under preferred-citation."
 keywords:
   - quantum information
   - superchannels

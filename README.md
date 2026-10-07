@@ -148,6 +148,7 @@ proof; Section 8 maps its steps to Lean declarations.
 | [REVIEW.txt](REVIEW.txt), [preparation-status.txt](preparation-status.txt), [publication-plan.md](publication-plan.md) | Assessment and publication preparation records. |
 | [PROVENANCE.md](PROVENANCE.md), [provenance/agents-2026-10-07.toml](provenance/agents-2026-10-07.toml) | Contributions and inspected agent-role configuration. |
 | [CITATION.cff](CITATION.cff), [.zenodo.json](.zenodo.json) | GitHub citation and Zenodo software-release metadata. |
+| [RELEASE_NOTES.md](RELEASE_NOTES.md) | Prepared description for the first GitHub Release, `v1.0.0`. |
 | [LICENSE](LICENSE), [RIGHTS.txt](RIGHTS.txt) | MIT License and its scope; external dependencies retain their licenses. |
 | [release-manifest.json](release-manifest.json) | SHA-256 hashes of the assembled publication files. |
 
@@ -179,8 +180,9 @@ The manuscript was first prepared on 5 October 2026; the current PDF is dated
 7 October 2026.
 The manuscript DOI is
 [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121), supplied by
-the author on 7 October 2026. The current software metadata version is
-`1.0.0-draft`; a tagged software archive and its DOI remain pending.
+the author on 7 October 2026. The software metadata is prepared as version
+**`1.0.0`**, for the GitHub tag **`v1.0.0`**. The tagged software archive and
+its DOI remain pending; preparing these files does not publish a release.
 This GitHub repository contains both the paper and the proof artifact.
 The recommended Zenodo setup uses two records: a
 GitHub-integrated **software artifact** and a separate **preprint** containing
@@ -195,15 +197,17 @@ the final manuscript. This lets the paper cite an immutable proof snapshot.
    title, human creator, ETH Zurich affiliation, MIT license, and AI disclosure.
    Zenodo uses this file in preference to `CITATION.cff`; keep their shared
    metadata consistent. Leave `doi` out of `.zenodo.json` so Zenodo assigns a
-   DOI to each new software version. Its version field is omitted so the
-   integration can use the release tag.
-3. Choose the first release tag, for example `v1.0.0-preprint`, and update
-   `CITATION.cff` and `release-manifest.json` to the same version string.
+   DOI to each new software version. `CITATION.cff`, `.zenodo.json`, and
+   `release-manifest.json` now all describe software version `1.0.0`.
+3. Review the prepared [release notes](RELEASE_NOTES.md) and the checks below.
    Set the CFF release date when actually releasing. Rebuild the PDF if its
-   source changed, refresh the release file hashes, and run the full verifier
-   (locally or with CI's manual option). Commit and push the reviewed files.
+   source changed, refresh the release file hashes, and commit and push the
+   reviewed files. Run the full verifier on that intended release commit
+   (locally or with CI's manual option), using a new output directory.
 4. Publish a GitHub Release for that tag after the checks pass. Zenodo archives
    new published releases; a normal commit push or a tag alone is insufficient.
+   Use tag `v1.0.0` and title `v1.0.0 — Formal verification artifact`, with
+   the prepared release notes as the description.
    Wait for processing, inspect the archived files and metadata, and copy the
    **specific software-version DOI** into the paper's availability paragraph.
    Retain the matching tag or commit there as an additional source locator.
@@ -225,6 +229,34 @@ The official guides cover [enabling the integration](https://help.zenodo.org/doc
 [metadata precedence](https://help.zenodo.org/docs/github/describe-software/),
 [reserving a manuscript DOI](https://help.zenodo.org/docs/deposit/describe-records/reserve-doi/),
 and [record versions](https://help.zenodo.org/docs/deposit/manage-versions/).
+
+## Checks before tagging
+
+- Check that `CITATION.cff`, `.zenodo.json`, and `release-manifest.json` all
+  say `1.0.0`, and that the intended tag is `v1.0.0`. Update all three
+  version fields together for subsequent releases.
+- Check the human creator name, ETH Zurich affiliation, MIT license,
+  manuscript DOI `10.5281/zenodo.23215121`, and the `isSupplementTo` link.
+  The manuscript DOI belongs to the paper. The software DOI is added after
+  the GitHub-integrated archive exists.
+- Review the release description's Eq. (39) scope, its Eq. (40) exclusion,
+  and its AI/provenance statement against the manuscript and `PROVENANCE.md`.
+- Follow [VERIFY.md](VERIFY.md) to verify the intended release commit. All
+  43 project sources must match the frozen source manifest, and the full
+  verifier must report successful compilation, exact-type and expansion
+  checks, allowed axioms, and kernel replay. The existing dated records
+  describe the same frozen source hashes; a new run supplies evidence for
+  the environment used at release time.
+- Check the assembled file hashes with the command in
+  [VERIFY.md](VERIFY.md#optional-check-the-release-file-hashes). Confirm that
+  the archive contains the intended publication files and excludes `.git`,
+  `.lake`, temporary outputs, credentials, and generated proof binaries.
+
+Historical preparation notes, candidate comments, and audit logs retain their
+original wording and absolute environment paths as provenance. The active
+release description identifies the artifact's current scope and version.
+These retained paths do not create a runtime dependency on the original
+workspace; use the portable root verifier to reproduce the checks.
 
 After editing existing publication files, refresh their recorded hashes from
 the repository root. Add any new publication file paths to `files` first;
@@ -248,8 +280,11 @@ path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 PY
 ```
 
-For GitHub's About settings, the suggested description is “Lean 4 verification
-of reference-stabilized geometric Rényi superchannel amortization collapse
+For GitHub's About settings, the suggested description is “Lean 4 formal
+verification artifact for reference-stabilized geometric Rényi superchannel amortization collapse
 for 1 < α ≤ 2.” Suggested topics are `lean4`, `formal-verification`,
 `quantum-information`, `quantum-information-theory`, `renyi-divergence`,
-`superchannels`, `quantum-channels`, and `mathlib`.
+`superchannels`, `quantum-channels`, `theorem-proving`, and `mathlib`.
+These values are prepared for the repository owner's About settings; the
+local files do not change GitHub's About panel. Add DOI and passing CI badges
+when the corresponding archive and workflow results are available.
