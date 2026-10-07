@@ -77,3 +77,44 @@ dependency binaries were retained. The standalone LaTeX build succeeded
 without warnings, and the PDF text contains the corrected disclosure.
 Full clean dependency installation and public identifiers remain pending as
 described above. The manuscript and project source package are licensed under MIT.
+
+Public repository and integration preparation, 7 October 2026
+
+The owner published the standalone source repository at
+https://github.com/vimohr/superchannel-amortization. The current README,
+verification guide, citation metadata, and manuscript availability statement
+now identify this public repository. ETH Zurich affiliation is included in
+the manuscript and metadata. These updates supersede the earlier preparation
+notes about pending repository creation and affiliation.
+
+Repository improvement suggestions were incorporated through clearer theorem
+terminology, a result-first README, explicit scope and trust boundaries, an
+inspection map, and a distinction between established ingredients and proposed
+contributions. The documented joint AI proof development and GPT-6.1-Sol
+manuscript writing remain the attribution used in the current publication.
+All frozen Lean sources, source hashes, and historical audit logs are retained.
+
+.zenodo.json prepares software-release metadata for GitHub--Zenodo integration;
+CITATION.cff identifies the public source repository. A Lean CI workflow checks
+source hashes, builds the theorem, prints definitions, and enforces the axiom
+allowlist, with a manual full-verifier option. Its first hosted execution
+requires committing and pushing the workflow. Enabling the integration and
+publishing a tagged release in the account are still pending. No tag, hosted
+CI success, human review, archival record, or DOI is represented as created.
+
+The README recommends a GitHub-integrated software record and a separate
+preprint record. The paper should cite the specific software-version DOI;
+the two distinct outputs must use distinct identifiers. The current version
+remains 1.0.0-draft until the release is finalized.
+
+Local preparation checks, 7 October 2026
+
+The workflow YAML, embedded shell and Python syntax, shared JSON/CFF
+metadata, and local documentation links were checked. ReadStatement.lean
+and ProofAudit.lean passed against the existing freshly compiled binary
+closure of the unchanged proof sources. The CI axiom parser accepted
+those reports and rejected injected sorryAx, a missing exact-type marker,
+and an unexpected axiom. This was local command validation; dependency
+installation and the workflow itself have not run on GitHub. The updated
+manuscript compiled without warnings, and its PDF text and layout were
+inspected. Publication manifests and source archives were regenerated.

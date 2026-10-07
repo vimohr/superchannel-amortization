@@ -663,14 +663,16 @@ The unsupported assertion follows from the same realization used above.
 \end{proof}
 
 \section{Formal verification and correspondence}
-The frozen artifact proves exactly
+The frozen artifact contains the proved theorem declaration
 \begin{quote}\small\ttfamily
 OpenQ.Problems.\\
 AmortizationCollapseSuperchannelDivergences\_148275.\\
 referenceStabilized\_collapse
 \end{quote}
-with literal target type
-\code{ReferenceStabilizedMainStatement}. The target quantifies all positive
+with exact theorem type
+\code{ReferenceStabilizedMainStatement}. This named proposition unfolds to
+the expanded theorem statement, a quantified equality of the two outer
+optimization domains. It quantifies all positive
 finite $a,b,c,d$, every real $1<\alpha\leq2$, and every pair of bundled
 physical realizations. It imposes no extra premise. Its state divergence
 uses the actual matrix-range support relation, real spectral powers, the
@@ -737,8 +739,10 @@ Theorem and Corollary & \code{StabilizedProofAlphaMain}:
 The verification script rebuilds all 43 project modules in the import closure
 from the frozen sources into an initially empty directory. Its
 \code{LEAN_PATH} excludes existing project and critic proof caches. It checks
-the theorem's exact target, an independently written expansion of the outer
-optimization domains, and the reported axioms of the main theorem and five
+that the declaration is a theorem of exactly the named type, with no
+additional theorem-level or universe parameters. It separately checks an
+independently written expansion of the outer optimization domains and
+enforces an axiom allowlist on the reports for the main theorem and five
 critical exports. The reported axiom set is
 \code{propext}, \code{Classical.choice}, and \code{Quot.sound}; no
 \code{sorryAx} occurs. It then replays the newly built closure using
@@ -792,14 +796,16 @@ associated documentation are licensed under the MIT License. The source release
 contains the full license text in \code{LICENSE}. External dependencies retain
 their respective licenses.
 
-The local artifact accompanies this draft as \code{artifact/},
-\code{verify_artifact.py}, and the verification logs. Its source manifest
-records every module's SHA-256 hash. The availability statement should be
-updated with the permanent artifact archive and manuscript version when
-the authors arrange public release. Submission metadata,
-and any further human contribution or specialist review are recorded as
-pending in the accompanying preparation document; no external human
-review or public archival release is represented as completed here.
+\textbf{Availability.} The manuscript sources, complete project proof closure,
+verification script, and recorded logs are publicly available at
+\url{https://github.com/vimohr/superchannel-amortization}.
+The repository's \code{VERIFY.md} and \code{HUMAN-CHECK.md} explain how to
+reproduce the checks and inspect the definitions. Its source manifest records
+every project module's SHA-256 hash. A permanent software archive and its
+specific version DOI will be added after the first GitHub--Zenodo release;
+the final manuscript is intended for a separate preprint record.
+Archival identifiers and external specialist review remain pending in the
+accompanying preparation record.
 
 \bibliographystyle{plain}
 \bibliography{references}

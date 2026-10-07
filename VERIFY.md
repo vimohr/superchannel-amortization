@@ -5,6 +5,15 @@ statement and definitions express the intended mathematics. This document
 gives a route through both. The detailed definitions review is in
 [HUMAN-CHECK.md](HUMAN-CHECK.md).
 
+The checks distinguish the **theorem declaration**
+`referenceStabilized_collapse`, its **exact theorem type**
+`ReferenceStabilizedMainStatement`, and the **expanded theorem statement**
+obtained by unfolding the optimization domains. The audit requires a theorem
+of exactly that named type, with no additional theorem-level or universe
+parameters, and separately checks an independently written expansion.
+The full Python verifier also enforces the axiom allowlist, excluding
+`sorryAx`, and performs fresh project compilation and kernel replay.
+
 | What you want to examine | Where to start |
 | --- | --- |
 | Reproduce the formal checks | The commands below and [verify_artifact.py](verify_artifact.py). |
@@ -44,7 +53,7 @@ python3 verify_artifact.py --output verification-local
 output directory or omit `--output` to use a newly created temporary directory.
 The script excludes existing project proof binaries from its import path.
 It checks source hashes, compiles all 43 project modules, checks the exact
-target and axiom dependencies, and replays the compiled proof closure using
+theorem type and axiom dependencies, and replays the compiled proof closure using
 `leanchecker`.
 
 If you already have the exact pinned dependencies installed in another Lake
@@ -87,8 +96,8 @@ uses installed external package binaries. It rebuilds and replays the project's
 | Check | Evidence in your output directory |
 | --- | --- |
 | All 43 project modules compiled successfully | `builds.json` and each module's log in `logs/`. |
-| The theorem has the exact expected target | `type_axioms.json` and `logs/proof_audit.log`, including `EXACT TARGET VERIFIED`. |
-| The target elaborates as the two stated outer optimization domains | `type_axioms.json` and the explicit example in [artifact/ProofAudit.lean](artifact/ProofAudit.lean). |
+| The declaration is a theorem of exactly the expected type, with no additional theorem-level or universe parameters | `type_axioms.json` and `logs/proof_audit.log`, including `EXACT TARGET VERIFIED`. |
+| The named type elaborates as the expanded statement with the two stated outer optimization domains | `type_axioms.json` and the explicit example in [artifact/ProofAudit.lean](artifact/ProofAudit.lean). |
 | Axiom dependencies stay within the standard set | `type_axioms.json` and the `depends on axioms` messages in `logs/proof_audit.log`. |
 | Kernel replay completed successfully | `kernel_replay.json`, its zero exit code, and `logs/kernel_replay.log`. |
 | The expected sources and dependency environment were used | [artifact/source_manifest.json](artifact/source_manifest.json), `environment.json`, and the verifier's hash and revision checks. |
@@ -123,30 +132,33 @@ lake env lean ../ProofAudit.lean
 cd ../..
 ```
 
-[ReadStatement.lean](artifact/ReadStatement.lean) prints the theorem target,
+[ReadStatement.lean](artifact/ReadStatement.lean) prints the theorem type,
 the key definitions, the physical superchannel structure, and the axiom list.
-[ProofAudit.lean](artifact/ProofAudit.lean) checks the exact closed target and
+[ProofAudit.lean](artifact/ProofAudit.lean) checks the exact closed theorem type and
 applies the theorem to an explicit expansion of the outer suprema. These files
 are short enough to inspect yourself. The full verifier additionally controls
-the project import path and performs fresh compilation and kernel replay.
+the project import path, enforces the axiom allowlist on the printed reports,
+and performs fresh compilation and kernel replay. Running `ProofAudit.lean`
+alone prints the axioms; it does not itself reject additional axioms.
 
 You can also read the previously printed definitions in
 [verification/human-statement.log](verification/human-statement.log).
 
-The final declaration is:
+The theorem declaration is:
 
 ```text
 OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilized_collapse
 ```
 
-Its literal target is:
+Its exact theorem type is:
 
 ```text
 OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ReferenceStabilizedMainStatement
 ```
 
-Read this target and the definitions it uses. `Statement.lean` also contains
-an older fixed-insertion-type `MainStatement`; the published theorem targets
+Read this proposition and the definitions it uses. Its expanded theorem
+statement is checked separately in `ProofAudit.lean`. `Statement.lean` also
+contains an older fixed-insertion-type `MainStatement`; the published theorem proves
 `ReferenceStabilizedMainStatement` in `StabilizedStatement.lean`.
 
 ## 4. Check that the definitions match the mathematics
@@ -201,6 +213,29 @@ external package binaries. The verifier does not rebuild or replay external
 packages. Installation in a completely new dependency environment remains
 to be independently reproduced. See [verification/README.md](verification/README.md)
 for the recorded environment and scope.
+
+## Continuous integration
+
+The [GitHub workflow](.github/workflows/lean.yml) runs on pushes to `main`,
+pull requests targeting `main`, and manual dispatch. It checks all 43 frozen
+source hashes, builds `StabilizedCollapse`, runs `ReadStatement.lean` and
+`ProofAudit.lean`, and rejects printed axioms outside the standard allowlist.
+It retains text logs and a CI result record as downloadable workflow artifacts.
+
+The routine job can use Lake and dependency caches. Its `ci/result.json`
+therefore records `fresh_source_build: false` and `kernel_replay: false`;
+these fields distinguish its limited checks from a full verifier run.
+
+For the full audit, use GitHub **Actions → Lean verification → Run workflow**
+and select the option to freshly compile all 43 modules and replay their
+proofs. This additionally runs `verify_artifact.py`; inspect
+`full/result.json` and its logs as described above. External dependency
+binaries can still be reused, and `external_packages_rebuilt_or_replayed`
+remains false. A hosted CI run does not supply specialist mathematical review.
+
+The workflow has been prepared for this repository. Its first GitHub-hosted
+run can occur after it is committed and pushed; local validation does not
+represent a completed hosted run. No passing CI or DOI badge is claimed here.
 
 ## Optional: check the release file hashes
 

@@ -4,6 +4,8 @@ type: software
 title: "Formal artifact for Amortization collapse for reference stabilized geometric Rényi superchannel divergences"
 version: "1.0.0-draft"
 license: MIT
+repository-code: "https://github.com/vimohr/superchannel-amortization"
+url: "https://github.com/vimohr/superchannel-amortization"
 authors:
   - family-names: Mohr
     given-names: Vinícius

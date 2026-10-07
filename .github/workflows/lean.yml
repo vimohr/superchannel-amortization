@@ -1,0 +1,108 @@
+name: Lean verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      full_verification:
+        description: Freshly compile all 43 project modules and replay their proofs
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      LEAN_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Check frozen project source hashes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+
+          root = Path("artifact")
+          manifest = json.loads((root / "source_manifest.json").read_text())
+          for module, entry in manifest["sources"].items():
+              actual = hashlib.sha256((root / entry["path"]).read_bytes()).hexdigest()
+              if actual != entry["sha256"]:
+                  raise SystemExit(f"Changed frozen source: {module}")
+          print(f"All {len(manifest['sources'])} frozen project source hashes match.")
+          PY
+
+      - name: Set up Lean and build the theorem
+        uses: leanprover/lean-action@v1
+        with:
+          lake-package-directory: artifact/lean
+          auto-config: "false"
+          build: "true"
+          build-args: OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedCollapse
+          use-mathlib-cache: "true"
+          use-github-cache: "true"
+
+      - name: Print definitions and check the exact theorem type
+        shell: bash
+        working-directory: artifact/lean
+        run: |
+          mkdir -p ../../verification-local/ci
+          lake env lean ../ReadStatement.lean 2>&1 | tee ../../verification-local/ci/read-statement.log
+          lake env lean ../ProofAudit.lean 2>&1 | tee ../../verification-local/ci/proof-audit.log
+
+      - name: Enforce the axiom allowlist
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          output = Path("verification-local/ci")
+          log = (output / "proof-audit.log").read_text()
+          if "EXACT TARGET VERIFIED" not in log or "sorryAx" in log:
+              raise SystemExit("Missing exact-type check or unexpected sorryAx.")
+          blocks = re.findall(r"depends on axioms:\s*\[([^]]*)\]", log)
+          if len(blocks) != 6:
+              raise SystemExit(f"Expected six axiom reports, found {len(blocks)}.")
+          allowed = {"propext", "Classical.choice", "Quot.sound"}
+          reported = []
+          for block in blocks:
+              axioms = {name.strip() for name in block.split(",") if name.strip()}
+              if not axioms <= allowed:
+                  raise SystemExit(f"Unexpected axioms: {sorted(axioms - allowed)}")
+              reported.append(sorted(axioms))
+          result = {
+              "exact_type_and_expansion": True,
+              "axiom_blocks": reported,
+              "fresh_source_build": False,
+              "kernel_replay": False,
+          }
+          (output / "result.json").write_text(json.dumps(result, indent=2) + "\n")
+          print("Exact type, expanded domains, and axiom allowlist passed.")
+          PY
+
+      - name: Run fresh compilation and kernel replay
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.full_verification }}
+        shell: bash
+        run: python3 verify_artifact.py --output verification-local/full
+
+      - name: Upload verification text records
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: lean-verification-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            verification-local/**/*.json
+            verification-local/**/*.log
+          if-no-files-found: ignore
+          retention-days: 14

@@ -35,7 +35,7 @@ encode tensor product spaces in a fixed basis.
 
 The final theorem in
 [StabilizedCollapse.lean](artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedCollapse.lean)
-has the literal target `ReferenceStabilizedMainStatement`. The checks in
+has the exact theorem type `ReferenceStabilizedMainStatement`. The checks in
 [ProofAudit.lean](artifact/ProofAudit.lean) also require that it is a closed
 theorem with that exact type and no universe parameters. The audit separately
 elaborates an explicit expansion of its two outer optimization domains and
@@ -138,7 +138,7 @@ novelty and significance, need their own assessment.
 
 ## How much human work is involved?
 
-The axiom and exact-target checks are automatic once the environment is set up.
+The axiom and exact-type checks are automatic once the environment is set up.
 The mathematical interpretation requires a reader familiar with quantum
 channels, geometric Rényi divergence, and the intended superchannel definitions.
 That reader can concentrate on Section 2, the definitions listed above, and

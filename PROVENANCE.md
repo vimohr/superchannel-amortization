@@ -43,8 +43,8 @@ and earlier review records are preserved in `artifact/prior-audit/`.
 
 The 43 project proof sources were copied verbatim from the frozen publication
 artifact prepared on 5 October 2026. Their SHA-256 hashes, import graph, and
-build order are in `artifact/source_manifest.json`. The main theorem and its
-literal target are listed in the repository README and checked by
+build order are in `artifact/source_manifest.json`. The theorem declaration and
+its exact type are listed in the repository README and checked by
 `artifact/ProofAudit.lean`.
 
 The preserved audit scripts and logs record earlier runs and may contain the
