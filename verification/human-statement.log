@@ -1,0 +1,126 @@
+OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilized_collapse :
+  ReferenceStabilizedMainStatement
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ReferenceStabilizedMainStatement : Prop :=
+∀ (a b c d : ℕ),
+  0 < a →
+    0 < b →
+      0 < c →
+        0 < d →
+          ∀ (α : ℝ),
+            1 < α →
+              α ≤ 2 →
+                ∀ (Θ₁ Θ₂ : PhysicalSuperchannel a b c d),
+                  referenceStabilizedAmortizedDivergence (geometricStateDivergence α) Θ₁ Θ₂ =
+                    referenceStabilizedOrdinaryDivergence (geometricStateDivergence α) Θ₁ Θ₂
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilizedOrdinaryDivergence : StateDivergence →
+  {a b c d : ℕ} → PhysicalSuperchannel a b c d → PhysicalSuperchannel a b c d → EReal :=
+fun D {a b c d} Θ₁ Θ₂ =>
+  sSup
+    {v |
+      ∃ r,
+        ∃ (_ : 0 < r),
+          ∃ N ρ, OpenQ.IsDensityMatrix ρ ∧ v = D (Fin (d * r)) ((Θ₁.referenceAct r ↑N) ρ) ((Θ₂.referenceAct r ↑N) ρ)}
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilizedAmortizedDivergence : StateDivergence →
+  {a b c d : ℕ} → PhysicalSuperchannel a b c d → PhysicalSuperchannel a b c d → EReal :=
+fun D {a b c d} Θ₁ Θ₂ =>
+  sSup
+    {v |
+      ∃ r,
+        ∃ (_ : 0 < r),
+          ∃ N M t,
+            amortizedChannelDivergence D N M = ↑t ∧
+              v = amortizedChannelDivergence D (Θ₁.referenceOnChannel r N) (Θ₂.referenceOnChannel r M) - ↑t}
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.amortizedChannelDivergence : StateDivergence →
+  {a b : ℕ} → Channel a b → Channel a b → EReal :=
+fun D {a b} N M =>
+  sSup
+    {v |
+      ∃ r,
+        ∃ (_ : 0 < r),
+          ∃ ρ σ,
+            OpenQ.IsDensityMatrix ρ ∧
+              OpenQ.IsDensityMatrix σ ∧
+                ∃ t,
+                  D (Fin r × Fin a) ρ σ = ↑t ∧
+                    v =
+                      D (Fin r × Fin b) ((OpenQ.Problems.EqualWeightLowChoiRank_523ed7.amplification r ↑N) ρ)
+                          ((OpenQ.Problems.EqualWeightLowChoiRank_523ed7.amplification r ↑M) σ) -
+                        ↑t}
+@[reducible] def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Channel : ℕ → ℕ → Type :=
+fun a b => { N // OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP N }
+def OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP : {a b : ℕ} →
+  (Matrix (Fin a) (Fin a) ℂ →ₗ[ℂ] Matrix (Fin b) (Fin b) ℂ) → Prop :=
+fun {a b} Φ =>
+  OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCompletelyPositive Φ ∧
+    ∀ (X : Matrix (Fin a) (Fin a) ℂ), (Φ X).trace = X.trace
+def OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCompletelyPositive : {a b : ℕ} →
+  (Matrix (Fin a) (Fin a) ℂ →ₗ[ℂ] Matrix (Fin b) (Fin b) ℂ) → Prop :=
+fun {a b} Φ =>
+  ∀ (k : ℕ),
+    0 < k →
+      ∀ (X : Matrix (Fin k × Fin a) (Fin k × Fin a) ℂ),
+        X.PosSemidef → ((OpenQ.Problems.EqualWeightLowChoiRank_523ed7.amplification k Φ) X).PosSemidef
+def OpenQ.IsDensityMatrix.{u_2} : {n : Type u_2} → [Fintype n] → Matrix n n ℂ → Prop :=
+fun {n} [Fintype n] ρ => ρ.PosSemidef ∧ ρ.trace = 1
+structure OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel (a b c d : ℕ) : Type
+number of parameters: 4
+fields:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.memory : ℕ
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.memory_pos : 0 < self.memory
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.pre : ChannelMap c
+      (a * self.memory)
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.post : ChannelMap
+      (b * self.memory) d
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.pre_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP
+      self.pre
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.post_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP
+      self.post
+constructor:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.mk {a b c d : ℕ} (memory : ℕ)
+    (memory_pos : 0 < memory) (pre : ChannelMap c (a * memory)) (post : ChannelMap (b * memory) d)
+    (pre_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP pre)
+    (post_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP post) : PhysicalSuperchannel a b c d
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.act : {a b c d : ℕ} →
+  PhysicalSuperchannel a b c d → ChannelMap a b → ChannelMap c d :=
+fun {a b c d} Θ N =>
+  Θ.post ∘ₗ OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.General.insertSlot Θ.memory N ∘ₗ Θ.pre
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.referenceRealization : {a b c
+    d : ℕ} →
+  PhysicalSuperchannel a b c d → (r : ℕ) → PhysicalSuperchannel (a * r) (b * r) (c * r) (d * r) :=
+fun {a b c d} Θ r =>
+  { memory := Θ.memory, memory_pos := ⋯,
+    pre :=
+      OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.Preparation.basisMap (memoryReferenceEquiv a Θ.memory r) ∘ₗ
+        OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.General.insertSlot r Θ.pre,
+    post :=
+      OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.General.insertSlot r Θ.post ∘ₗ
+        OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.Preparation.basisMap
+          (memoryReferenceEquiv b Θ.memory r).symm,
+    pre_cptp := ⋯, post_cptp := ⋯ }
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.referenceAct : {a b c d :
+    ℕ} →
+  PhysicalSuperchannel a b c d → (r : ℕ) → ChannelMap (a * r) (b * r) → ChannelMap (c * r) (d * r) :=
+fun {a b c d} Θ r N => (Θ.referenceRealization r).act N
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.referenceOnChannel : {a b c
+    d : ℕ} →
+  PhysicalSuperchannel a b c d → (r : ℕ) → Channel (a * r) (b * r) → Channel (c * r) (d * r) :=
+fun {a b c d} Θ r N => ⟨Θ.referenceAct r ↑N, ⋯⟩
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.RangeIncluded : {n : Type} →
+  [Fintype n] → Operator n → Operator n → Prop :=
+fun {n} [Fintype n] ρ σ => (Set.range fun v => Matrix.mulVec ρ v) ⊆ Set.range fun v => Matrix.mulVec σ v
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.supportInvSqrtScalar : ℝ → ℝ :=
+fun x => if x = 0 then 0 else (√x)⁻¹
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.supportInvSqrt : {n : Type} →
+  [Fintype n] → [DecidableEq n] → Operator n → Operator n :=
+fun {n} [Fintype n] [DecidableEq n] σ => hermitianSpectralFunction supportInvSqrtScalar σ
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.hermitianPower : {n : Type} →
+  [Fintype n] → [DecidableEq n] → Operator n → ℝ → Operator n :=
+fun {n} [Fintype n] [DecidableEq n] X α => hermitianSpectralFunction (fun x => x.rpow α) X
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.geometricMoment : {n : Type} →
+  [Fintype n] → [DecidableEq n] → ℝ → Operator n → Operator n → ℝ :=
+fun {n} [Fintype n] [DecidableEq n] α ρ σ => (σ * hermitianPower (supportInvSqrt σ * ρ * supportInvSqrt σ) α).trace.re
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.geometricStateDivergence : ℝ → StateDivergence :=
+fun α x x_1 x_2 ρ σ => if RangeIncluded ρ σ then ↑(log₂ (geometricMoment α ρ σ) / (α - 1)) else ⊤
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilized_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

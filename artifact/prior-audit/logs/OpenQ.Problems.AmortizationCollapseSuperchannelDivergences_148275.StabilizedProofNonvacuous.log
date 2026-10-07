@@ -1,0 +1,3 @@
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous.claim_c1_nonvacuous' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

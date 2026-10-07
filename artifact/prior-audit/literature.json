@@ -1,0 +1,95 @@
+{
+  "review_date": "2026-10-05",
+  "conclusion": "No earlier published proof of the exact reference-stabilized nested geometric Renyi superchannel equality was located. This is a bounded literature search, not a certificate of novelty.",
+  "query_families": [
+    "superchannel geometric amortization collapse",
+    "superchannel Renyi divergence collapse",
+    "geometric Renyi quantum comb divergence",
+    "geometric quantum strategy divergence",
+    "superchannel maximal Renyi divergence",
+    "quantum strategies chain rule divergence",
+    "superchannel geometric amortized 2024 2025 2026",
+    "Quantum Network Discrimination collapse 2024 2025 2026",
+    "amortization collapse combs"
+  ],
+  "sources_inspected": [
+    {
+      "title": "Quantum Network Discrimination",
+      "author": "Christoph Hirche",
+      "url": "https://quantum-journal.org/papers/q-2023-07-25-1064/pdf/",
+      "relevance": "Definitions 4.4 and 4.5, Eqs. (33) and (39), match the locked target. Eq. (40) is stronger and separate. Remark 5.4 leaves general superchannel amortization collapse open."
+    },
+    {
+      "title": "Geometric Renyi Divergence and its Applications in Quantum Channel Capacities",
+      "authors": "Kun Fang and Hamza Fawzi",
+      "url": "https://arxiv.org/pdf/1909.05758",
+      "journal_url": "https://link.springer.com/article/10.1007/s00220-021-04064-4",
+      "relevance": "Known ordinary-channel Choi formula, channel chain rule and amortization collapse, and operator transformer inequality. These ingredients deserve attribution; the paper does not assert the C31 superchannel equality."
+    },
+    {
+      "title": "Uniqueness and Optimality of Dynamical Extensions of Divergences",
+      "author": "Gilad Gour",
+      "url": "https://arxiv.org/pdf/2006.13340",
+      "relevance": "Channel extensions, including geometric channel divergences, rather than the nested superchannel equality."
+    },
+    {
+      "title": "Process tensor distinguishability measures",
+      "author": "Guilherme Zambon",
+      "url": "https://arxiv.org/html/2407.15712v1",
+      "relevance": "Generalized comb divergences and superprocess data processing. No geometric superchannel amortization-collapse theorem was found in the inspected text."
+    },
+    {
+      "title": "Conditional entropy and information of quantum processes",
+      "authors": "Siddhartha Das, Kaustav Goswami, and Vivek Pandey",
+      "url": "https://arxiv.org/pdf/2410.01740",
+      "relevance": "Geometric channel conditional entropy and the known channel Choi formula; no nested superchannel collapse statement located."
+    },
+    {
+      "title": "Towards the ultimate limits of quantum channel discrimination and quantum communication",
+      "authors": "Kun Fang, Gilad Gour, and Xin Wang",
+      "url": "https://arxiv.org/pdf/2110.14842",
+      "relevance": "Channel discrimination and regularized/amortized channel divergences, rather than the C31 superchannel theorem."
+    },
+    {
+      "title": "Additivity and chain rules for quantum entropies via multi-index Schatten norms",
+      "authors": "Omar Fawzi, Jan Kochanowski, Cambyse Rouze, and Thomas Van Himbeeck",
+      "url": "https://arxiv.org/html/2502.01611v3",
+      "relevance": "Entropy and norm chain rules. The inspected text supplied no earlier statement of C31."
+    },
+    {
+      "title": "Quantifying quantum causal networks",
+      "author": "Sumeet Khatri",
+      "url": "https://sumeetkhatri.com/wp-content/uploads/2020/11/res_theory_q_combs_v2.pdf",
+      "relevance": "Earlier notes on generalized comb divergence and causal-network information quantities; no geometric amortization-collapse theorem located."
+    },
+    {
+      "title": "Resource theory of asymmetric distinguishability for quantum channels",
+      "authors": "Xin Wang and Mark M. Wilde",
+      "url": "https://arxiv.org/pdf/1907.06306",
+      "relevance": "Earlier generalized strategy divergences and resource theory. The inspected text supplied no geometric superchannel amortization-collapse result."
+    },
+    {
+      "title": "Estimating distinguishability measures on quantum computers",
+      "authors": "Soorya Rethinasamy, Rochisha Agarwal, Kunal Sharma, and Mark M. Wilde",
+      "url": "https://arxiv.org/pdf/2108.08406",
+      "relevance": "Algorithms for trace distance and fidelity of states, channels and strategies; no candidate theorem matching C31 located."
+    },
+    {
+      "title": "Transforming quantum operations: quantum supermaps",
+      "authors": "Giulio Chiribella, Giacomo Mauro D'Ariano, and Paolo Perinotti",
+      "url": "https://arxiv.org/pdf/0804.0180",
+      "relevance": "Theorem 1, Eq. (23), justifies representing every finite-dimensional deterministic physical superchannel by preprocessing, finite memory and postprocessing. This representation theorem is not re-proved in the locked Lean target."
+    },
+    {
+      "title": "Amortization collapse for superchannel divergences, QIQCOP record op_1482756b02794495",
+      "url": "https://qiqc-op.com/problem/op_1482756b02794495/",
+      "relevance": "The live catalogue still labels the geometric case Unsolved, last edited 2026-09-25. This supports, but does not establish, absence of an earlier solution."
+    }
+  ],
+  "limitations": [
+    "Direct arXiv search-page retrieval failed with a cache miss; individual arXiv papers and indexed search results were available.",
+    "The search cannot exclude unpublished work, uncited results under different terminology, or work absent from the search index.",
+    "Search results were used to locate primary sources; secondary generated topic pages were not used as technical evidence.",
+    "C31 is a registration of an earlier proof in this same workspace: the 16 ported modules derive from critic scratch in work/critic/e002_i01 and work/critic/e002_i02. This earlier local provenance is explicitly disclosed."
+  ]
+}

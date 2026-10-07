@@ -1,0 +1,7 @@
+/scratch/vimohr/lean_run/publications/superchannel-amortization-2026-10-05/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofSpectral.lean:33:42: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+/scratch/vimohr/lean_run/publications/superchannel-amortization-2026-10-05/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofSpectral.lean:35:0: warning: automatically included section variable(s) unused in theorem `OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofSpectral.diagonal_real_isHermitian`:
+  [Fintype n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-05",
+  "purpose": "Publication scope and bounded priority assessment",
+  "prior_record": "artifact/prior-audit/literature.json",
+  "additional_queries": [
+    "\"superchannel\" \"geometric\" \"amortization\"",
+    "\"geometric Rényi\" \"comb\" \"collapse\"",
+    "\"superchannel\" \"maximal Rényi\" \"amortization\""
+  ],
+  "primary_sources_checked": [
+    {
+      "url": "https://quantum-journal.org/papers/q-2023-07-25-1064/pdf/",
+      "locations": "Section 3 after Eq. (20); Definition 4.4 Eq. (33); Definition 4.5 Eqs. (39)-(40)",
+      "finding": "Inserted R and external state references are distinct; Eq. (39) is nested and Eq. (40) is a stronger separate quantity."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1909.05758",
+      "version_record": "https://arxiv.org/abs/1909.05758",
+      "locations": "Lemmas 5, 6, 7; Appendix A Lemma 47",
+      "finding": "Established channel formulas, additivity, chain rule, and transformer estimate; no exact nested superchannel equality identified."
+    },
+    {
+      "url": "https://arxiv.org/pdf/0804.0180",
+      "version": "v2, published version",
+      "locations": "Theorem 1, Eq. (23)",
+      "finding": "Every deterministic physical supermap has a finite pre/post-processing realization. This background representation is cited, not newly formalized."
+    },
+    {
+      "url": "https://arxiv.org/html/2407.15712",
+      "version": "v2, 8 November 2024",
+      "locations": "Section IV and surrounding distinction between Choi and generalized comb divergences",
+      "finding": "Generalized comb data processing is related background; no exact C31 amortization-collapse result identified in the inspected text."
+    },
+    {
+      "url": "https://arxiv.org/abs/2006.13340",
+      "finding": "Related dynamical extensions; part of the prior twelve-source search. Abstract/version record revisited here, rather than a new full-text theorem audit."
+    },
+    {
+      "url": "https://arxiv.org/abs/1808.01498",
+      "finding": "Primary bibliographic metadata checked for the established channel-amortization reference."
+    },
+    {
+      "url": "https://qiqc-op.com/problem/op_1482756b02794495/",
+      "finding": "Record still labels the geometric case Unsolved, with last edit 25 September 2026. Its superchannel display omits inserted-reference labels; manuscript makes the source convention explicit."
+    }
+  ],
+  "conclusion": "No earlier proof of the precise C31 equality was located in this bounded search. The manuscript establishes the mathematical result without asserting that this is the first proof.",
+  "limits": [
+    "Search results were used to locate primary sources, not as technical theorem evidence.",
+    "Forward citations, unpublished work, alternate terminology, and incomplete indexing remain limitations.",
+    "No external human specialist review or scientific-priority certification has occurred.",
+    "The local earlier critic-agent proof is the source of C31, not an independent competing publication."
+  ]
+}

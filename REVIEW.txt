@@ -1,0 +1,103 @@
+Review of the reference stabilized superchannel result, 5 October 2026
+
+Conclusion: C31 proves the intended reference stabilized nested geometric Renyi
+collapse for every real 1 < alpha <= 2 and all positive finite dimensions.
+The conventional proof in manuscript.tex reconstructs the decisive steps from
+the registered Lean sources. No mathematical gap was found in those steps.
+
+The email itself was not supplied. This review evaluates the C31 source theorem
+directly rather than certifying the wording of an unseen email.
+
+Exact checked declaration:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilized_collapse
+Literal target:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ReferenceStabilizedMainStatement
+
+The source files and their SHA-256 hashes match the independent audit of
+5 October 2026. All 43 modules were copied into the publication artifact before
+manuscript preparation. The frozen copy was also preserved outside the research
+workspace at /tmp/superchannel-amortization-frozen-2026-10-05. The verification
+script rebuilds the frozen project sources in isolation, checks the literal
+target and expanded operational definition, audits six theorem axiom reports,
+and replays the fresh closure with leanchecker. The completed run's result is
+recorded in verification/result.json, with commands, timings, and log hashes in
+the neighboring JSON records. Only propext, Classical.choice, and Quot.sound are
+reported. The original locked proof sources were not edited.
+
+Scope assessment
+
+Hirche's journal Definition 4.4, Eq. (33), permits arbitrary joint insertions
+N: A tensor R -> B tensor R. Definition 4.5, Eq. (39), subtracts the entire
+input-channel amortized divergence and independently amortizes output states.
+StabilizedAction.lean tensors the physical teeth with id_R and explicitly moves
+the accessible R past the inaccessible memory. StabilizedStatement.lean
+quantifies every positive inserted dimension r. Each inner amortized divergence
+quantifies its own positive external dimension s, and exact real cost witnesses
+exclude infinite subtractions while retaining all finite terms.
+
+The conventional reference-absorption proof in Proposition 2 makes the ordinary
+state supremum equal to the ordinary output-channel formulation by replacing
+R with R tensor S and inserting N tensor id_S. It does not use the collapse
+theorem and is not represented as a separately formalized result in this release.
+
+The QIQCOP display suppresses the inserted reference and does not resolve its
+convention explicitly. C31 resolves the intended Hirche reference stabilized
+question. A strictly fixed-type reading, allowing only N:A->B, is a different
+statement. The earlier correct C18 disproof applies to that restricted statement
+and was previously rejected as a resolution of the intended source problem.
+C31 supplies the missing inserted-reference quantifier; it does not invalidate
+C18. The manuscript states the distinction explicitly.
+
+Decisive proof checks
+
+1. The supported singular transformer estimate has no invertibility hypothesis
+   on its denominator or rectangular congruence. Orders below two follow from
+   integrable quadratic forms of X(X+tY)^+X; order two follows from block
+   positivity. Invertible congruences give equality and preserve support failure.
+2. Finite entire input-channel cost t forces Choi support and the operator bound
+   Tr_out G_alpha(J_N,J_M) <= 2^((alpha-1)t) I. Equal pure input tests derive
+   this directly from the supremum. No channel-collapse premise is smuggled in.
+3. The physical amplified output is a congruence contraction of the comb,
+   insertion Choi matrix, and input state. Tester completion controls its trace
+   uniformly for all inserted r and independent external s.
+4. A positive definite feasible tester is physically realized with common
+   reference dimension r=c*a*b. The insertion's isometric part is completed
+   by reset Kraus operators on the unused input subspace, making it CPTP globally.
+   The output congruence is invertible and realizes the full-transpose pairing.
+5. Mixing any singular feasible tester with the strictly feasible identity
+   tester extends the linear objective bound without assuming continuity of
+   inverse powers. The supported-case proof assembles the exact finite value
+   of the ordinary supremum at r=c*a*b. It proves a least upper bound, not an
+   optimizer attainment assertion.
+6. Unsupported comb pairs have an ordinary test of divergence +infinity. Equal
+   insertions cost zero, proving the nested value is +infinity as well.
+
+Trust boundary
+
+Lean 4.34.1 and existing external dependency binaries were retained. The package
+checks the pinned external source revisions and clean tracked files but does not
+rebuild or replay those dependencies. leanchecker uses the installed Lean kernel.
+The correspondence with all physical deterministic superchannels also uses the
+published physical realization theorem, which the Lean target does not reprove.
+The new proof presentation has been checked by this AI assistant; no external
+human specialist review is claimed.
+
+Priority and attribution
+
+The bounded primary-source search located no earlier statement of the exact
+equality. Neither this search nor formal verification certifies scientific
+priority or journal significance. The transformer estimate and ordinary-channel
+ingredients are Fang--Fawzi's established results. The superchannel contribution
+is the uniform tester completion and physical realization argument.
+
+Attribution updated at Vinícius Mohr's request on 7 October 2026: the research
+and proofs were developed jointly by GPT-6.1-Sol and Claude Opus 5.5 agents.
+The inspected agents.toml assigns research, supervision, literature, and triage
+to GPT-6.1-Sol and the critic role to Claude Opus 5.5. The critic contributed
+substantive proof material. GPT-6.1-Sol wrote the manuscript. Mohr initiated
+the automated research using lean-orchestrator, built using Claude Opus 5.5,
+to attempt QIQCOP problems. The registered proof ports earlier local
+critic-agent material; registration was not a second independent discovery.
+
+The larger fully amortized quantity of Hirche Eq. (40), arbitrary multi-slot
+combs, alpha=1, and stronger operational conclusions remain outside this result.

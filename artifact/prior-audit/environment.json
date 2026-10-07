@@ -1,0 +1,15 @@
+{
+  "lean_path": "/scratch/vimohr/lean_run/problems/amortization-collapse-for-superchannel-divergences-148275/work/user_audit_20261005/fresh:/scratch/vimohr/lean_run/lean/.lake/packages/batteries/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/Qq/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/aesop/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/importGraph/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/plausible/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/mathlib/.lake/build/lib/lean:/scratch/vimohr/lean_run/lean/.lake/packages/Physlib/.lake/build/lib/lean:/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/lib/lean",
+  "excluded": [
+    "/scratch/vimohr/lean_run/lean/.lake/packages/MD4Lean/.lake/build/lib/lean",
+    "/scratch/vimohr/lean_run/lean/.lake/packages/BibtexQuery/.lake/build/lib/lean",
+    "/scratch/vimohr/lean_run/lean/.lake/packages/UnicodeBasic/.lake/build/lib/lean",
+    "/scratch/vimohr/lean_run/lean/.lake/packages/Cli/.lake/build/lib/lean",
+    "/scratch/vimohr/lean_run/lean/.lake/packages/leansqlite/.lake/build/lib/lean",
+    "/scratch/vimohr/lean_run/lean/.lake/packages/doc-gen4/.lake/build/lib/lean",
+    "/scratch/vimohr/lean_run/lean/.lake/build/lib/lean"
+  ],
+  "lean_sha256": "e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550",
+  "leanchecker_sha256": "ccef1bfe9bfeecea65137d94a69033c1a89f360711f50fa3178e7ba3e696fcbe",
+  "external_package_binaries_retained": true
+}

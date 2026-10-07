@@ -1,0 +1,29 @@
+{
+  "audit": {
+    "command": [
+      "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+      "-DautoImplicit=false",
+      "-DrelaxedAutoImplicit=false",
+      "-DmaxSynthPendingDepth=3",
+      "-Dpp.unicode.fun=true",
+      "-R",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact",
+      "-o",
+      "/tmp/superchannel-publication-verification-igeaqzul/results/ProofAudit.olean",
+      "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/ProofAudit.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 5.247,
+    "log": "logs/proof_audit.log",
+    "log_sha256": "869bdc11d7dbbe7a5fba313c7d2b33059c38a9f4ad9a8102fd2e5d255ebdc583"
+  },
+  "axiom_blocks": [
+    "propext,\n Classical.choice,\n Quot.sound",
+    "propext,\n Classical.choice,\n Quot.sound",
+    "propext,\n Classical.choice,\n Quot.sound",
+    "propext,\n Classical.choice,\n Quot.sound",
+    "propext,\n Classical.choice,\n Quot.sound",
+    "propext,\n Classical.choice,\n Quot.sound"
+  ],
+  "unfolded_operational_statement_checked": true
+}

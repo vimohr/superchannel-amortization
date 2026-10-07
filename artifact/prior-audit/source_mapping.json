@@ -1,0 +1,321 @@
+{
+  "namespace_mapping": {
+    "CriticReindexE2I01": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex",
+    "CriticDomE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom",
+    "CriticSumsE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums",
+    "CriticCombE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb",
+    "CriticTesterE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester",
+    "CriticChannelE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel",
+    "CriticUpperE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper",
+    "CriticRealizeE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize",
+    "CriticMainE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo",
+    "CriticLiteralE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral",
+    "CriticChannelValueE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue",
+    "CriticClaimsE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims",
+    "CriticNonvacuousE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous",
+    "CriticAlphaE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha",
+    "CriticAlphaChainE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain",
+    "CriticAlphaMainE2I02": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain"
+  },
+  "modules": [
+    {
+      "source_module": "CriticDomE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticDomE2I02.lean",
+      "source_sha256": "58d6c4e0e6f7e952cd172af8665cbebc435a8d31cc8baa8e77bac9c0752fb907",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofDom.lean",
+      "destination_sha256": "4f0a2a36c54a1f84330ed0e07e4cc613a10045024a6eccf00569af51a1d006cd",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticCombE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticCombE2I02.lean",
+      "source_sha256": "d090a8cae5fca18379e5e42435bb49c8a70b3f1fcfc89190f7053d6a45bba530",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofComb.lean",
+      "destination_sha256": "eaa1d5a28cda33fc60b0b26518198316400f162ad039369778749051db94ec2c",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 2,
+        "CriticCombE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticSumsE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticSumsE2I02.lean",
+      "source_sha256": "534941be01ef86fdebe3150db418aa558a62341af4bc74b5544a1e4cd044c633",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofSums.lean",
+      "destination_sha256": "2254689f53dbc8485157d215749b3f52ea059c8259b221774536e5346255e87e",
+      "renamed_token_counts": {
+        "CriticSumsE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticTesterE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticTesterE2I02.lean",
+      "source_sha256": "a8d9ba89709f593b8a3425c39173d42793ff40ffcdc92fa80cc0efdba015012b",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofTester.lean",
+      "destination_sha256": "f6097944cc4cbbe23a5fcffd90797ebaad6ecb353f2fbb3a0c537a1e08eabede",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticSumsE2I02": 2,
+        "CriticCombE2I02": 2,
+        "CriticTesterE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticChannelE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticChannelE2I02.lean",
+      "source_sha256": "7d13da3dfdb98d09c644a140b97b71cb55e74adcc643612024955bf8bb42d2f1",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannel.lean",
+      "destination_sha256": "ef63bad5bdb7f9c94b41633f91f3abbad9d38ae005680b17deeeb4adb96893a3",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticSumsE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 2,
+        "CriticChannelE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticReindexE2I01",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i01/CriticReindexE2I01.lean",
+      "source_sha256": "95a8740641c35aa957bece4fa21a8c34f03474444854fa45b407e8a6e0d1b306",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofReindex.lean",
+      "destination_sha256": "2110898899d9c2dbeb4a02b29fad99c0bfb2e9063511fc1f6f21ba5584b8caf1",
+      "renamed_token_counts": {
+        "CriticReindexE2I01": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticUpperE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticUpperE2I02.lean",
+      "source_sha256": "8e3ef9cece112545a402e2381c6c737694ac6adb333a283f17af5459af4414c6",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofUpper.lean",
+      "destination_sha256": "9f04b2ddc22c1d3b5d7e1800f93e09ead02e999a3a1bfd67cb8205eacfd14066",
+      "renamed_token_counts": {
+        "CriticReindexE2I01": 3,
+        "CriticDomE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 2,
+        "CriticUpperE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticRealizeE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticRealizeE2I02.lean",
+      "source_sha256": "2504cd255e3c9846f7d8a1f93bccedf832ed9ec20abb4748bc88b6a0e41572ef",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.lean",
+      "destination_sha256": "98739add3862992f147f2000ef4c3eb0b851a5c591860947781ea9953078c7f1",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticSumsE2I02": 2,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticUpperE2I02": 2,
+        "CriticRealizeE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticMainE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticMainE2I02.lean",
+      "source_sha256": "b198509fb53465051fbc2f0faa1badaac245c77fe70ef064ed8e644b4805d499",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwo.lean",
+      "destination_sha256": "0a2b5d4434b297dc07e224115b04332aba227c1c9518c471497e4ad137c9c06b",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticUpperE2I02": 1,
+        "CriticRealizeE2I02": 2,
+        "CriticMainE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticLiteralE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticLiteralE2I02.lean",
+      "source_sha256": "3b57cd808aecd031dc2b74518e74d9faeed5739e23957c19e18232da70d605a8",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofLiteral.lean",
+      "destination_sha256": "6df934a045f7060340fa03f29d38eccf0928078abafd12b3f93a049bfff538e1",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticSumsE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticUpperE2I02": 1,
+        "CriticRealizeE2I02": 1,
+        "CriticMainE2I02": 2,
+        "CriticLiteralE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticChannelValueE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticChannelValueE2I02.lean",
+      "source_sha256": "ceb6089118321354baf7a19a16d95ae614cb50c778c67741c94aa3812490eff2",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannelValue.lean",
+      "destination_sha256": "5eda9813f3081ac7d42923d085200eea503cc41a2347c19443f85f6646f990dd",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticSumsE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticUpperE2I02": 1,
+        "CriticLiteralE2I02": 2,
+        "CriticChannelValueE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticAlphaE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticAlphaE2I02.lean",
+      "source_sha256": "631b2f97618398be4bdac44e26a75752ecc4edc5286fbe1d1267bff6b37e8b37",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlpha.lean",
+      "destination_sha256": "01a106e9b8d34d8a90716dc9ef02f68873d1eb175ce4b610a3d8421e204cd6ed",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticChannelValueE2I02": 2,
+        "CriticAlphaE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticAlphaChainE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticAlphaChainE2I02.lean",
+      "source_sha256": "e00b27da0a14fa2f7070096e3767ae05eb35eda4ec198aea9443f9cd20307021",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaChain.lean",
+      "destination_sha256": "fbd910761468ccb9e97fa80da5ea0a48af88c9c3b3cedba1b29394b645905938",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticAlphaE2I02": 2,
+        "CriticAlphaChainE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticClaimsE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticClaimsE2I02.lean",
+      "source_sha256": "e1651283c4ae6051dc5e731e386920fd58ba484459760ef92d9bef93b3576e7b",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwoClaims.lean",
+      "destination_sha256": "8ac9f2d644f2f24fa487c790e9ea1184cdd97cdb866dd9ebdc25bf72e5ba0fc0",
+      "renamed_token_counts": {
+        "CriticDomE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticUpperE2I02": 1,
+        "CriticMainE2I02": 1,
+        "CriticLiteralE2I02": 1,
+        "CriticChannelValueE2I02": 5,
+        "CriticClaimsE2I02": 3
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticNonvacuousE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticNonvacuousE2I02.lean",
+      "source_sha256": "06c682d7d06c3e6d2a5d773e2cd9b182fe52378a451bd031a60d596f9f2f3852",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofNonvacuous.lean",
+      "destination_sha256": "9176430e5be22fb84459fb3034853ac0ae57a4ff9d9e059f0eb025065aff8cb7",
+      "renamed_token_counts": {
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticMainE2I02": 1,
+        "CriticClaimsE2I02": 2,
+        "CriticNonvacuousE2I02": 3
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    },
+    {
+      "source_module": "CriticAlphaMainE2I02",
+      "source": "problems/amortization-collapse-for-superchannel-divergences-148275/work/critic/e002_i02/CriticAlphaMainE2I02.lean",
+      "source_sha256": "d6221c3ec68aa0d33a042c18b60c5a39e2e6d352a741f31e4a77c9256d2eaf73",
+      "destination_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain",
+      "destination": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaMain.lean",
+      "destination_sha256": "c444b05206360ba3605a5a4d2c293a82ef9b883d2d361b50d3bcbd9a66188c20",
+      "renamed_token_counts": {
+        "CriticReindexE2I01": 2,
+        "CriticDomE2I02": 1,
+        "CriticCombE2I02": 1,
+        "CriticTesterE2I02": 1,
+        "CriticChannelE2I02": 1,
+        "CriticUpperE2I02": 1,
+        "CriticRealizeE2I02": 1,
+        "CriticMainE2I02": 1,
+        "CriticNonvacuousE2I02": 1,
+        "CriticAlphaE2I02": 1,
+        "CriticAlphaChainE2I02": 2,
+        "CriticAlphaMainE2I02": 2
+      },
+      "documentation_change": "New ordinary-comment provenance banner; historical header retained. The first build rejected a module-doc banner before imports; only the banner comment delimiter was corrected.",
+      "substantive_proof_changes": [],
+      "inverse_renaming_recovers_entire_source": true
+    }
+  ],
+  "substantive_proof_changes": [],
+  "extra_declarations": [
+    "A closed main-target wrapper and audit examples, separately hashed."
+  ],
+  "review_status": "Unaccepted critic source, registration port only; independent review required."
+}

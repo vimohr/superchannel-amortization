@@ -1,0 +1,19 @@
+{
+  "checked_on": "2026-10-07",
+  "command": [
+    "/scratch/vimohr/.elan/toolchains/leanprover--lean4---v4.34.1/bin/lean",
+    "-R",
+    "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact",
+    "/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/ReadStatement.lean"
+  ],
+  "command_exit_code": 0,
+  "used_fresh_project_modules": true,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "log": "human-statement.log",
+  "log_sha256": "a669442fcfca1993449eea4b1bc182f298ec5eb1299ccd2228b4073f86a15e54",
+  "statement_source_sha256": "d12615e06cee1cad941a4148b0b83484da19b36c4cce28abe67834264af219bc"
+}

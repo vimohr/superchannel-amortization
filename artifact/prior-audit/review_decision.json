@@ -1,0 +1,19 @@
+{
+  "command": [
+    "lean-orch",
+    "review",
+    "op_1482756b02794495",
+    "--accept"
+  ],
+  "command_exit_code": 0,
+  "initially_queued": true,
+  "application_confirmed": true,
+  "final_problem_status": "solved",
+  "claim": "C31",
+  "review_hint": {
+    "text": "Human review accepted C31.",
+    "time": "2026-10-04T22:22:21Z"
+  },
+  "locked_file_count": 49,
+  "locked_files_unchanged": true
+}

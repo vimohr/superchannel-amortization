@@ -1,0 +1,154 @@
+INDEPENDENT USER-REQUESTED REVIEW OF C31, 2026-10-05
+
+Decision: ACCEPT the exact scoped C31 theorem. The separate kernel replay passed.
+Scientific novelty remains provisional. This review is
+independent of the earlier proof author's review and does not rely on its verdict.
+
+Declaration:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilized_collapse
+Exact type:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ReferenceStabilizedMainStatement
+
+1. What was checked
+
+I read PROGRESS.md, the previous human correction in USER_REVIEW.txt, the locked
+definitions, the final assembly, and the critical supported-perspective, physical
+contraction, tester-completion and realization steps. I compared the definitions
+with the original published source and searched for earlier results.
+
+The independent verify.py in this directory recomputed the import graph and
+compiled all 43 OpenQ modules from their current sources to a new initially empty
+fresh/ directory. All compilations exited zero. LEAN_PATH excluded the shared
+OpenQ cache and every critic build directory. The separately written ProofAudit.lean
+checked theorem metadata for literal target identity and no universe parameters,
+elaborated an independently written expansion of the two outer optimization
+domains, and printed the underlying physical and channel-cost definitions.
+
+The theorem and five critical exports have exactly the standard axiom set
+{propext, Classical.choice, Quot.sound}; no sorryAx appears. A source scan of all
+43 modules, 9429 lines, found no proof placeholders, extra axioms, unsafe
+declarations, or the scanned mechanisms for bypassing kernel checking. All 49
+files in the problem's locked-file manifest match their recorded SHA-256 hashes.
+
+Separate leanchecker replay of the 43 freshly compiled modules exited zero with
+an empty diagnostic log. Its exit status, command and log hash are recorded in
+kernel_replay.json, and result.json records success for every verification step.
+Sources were hashed before compilation and confirmed unchanged after replay.
+
+This run retained the installed Lean 4.34.1, Mathlib and Physlib binaries. It did
+not rebuild or replay external packages. Mathlib's source revision is
+d13f23b723b8a846827a245b89c10fc7d3f11612 and Physlib's is
+44c66d54be78db4693be9f8f92bd3b5ad124ed6f. This trust boundary is disclosed in
+environment.json and result.json. leanchecker uses the installed Lean kernel,
+rather than a separately implemented proof verifier.
+
+2. Correspondence with the intended mathematical question
+
+The corrected locked target matches Hirche's Quantum Network Discrimination,
+Definition 4.4, Eq. (33), and Definition 4.5, Eq. (39):
+  https://quantum-journal.org/papers/q-2023-07-25-1064/pdf/
+
+All Hilbert spaces are positive finite complex dimensions. Channel maps are
+complex-linear, with independently defined complete positivity on every finite
+amplification and ordinary trace preservation. Density matrices are PSD with
+trace one. A PhysicalSuperchannel contains CPTP preprocessing and postprocessing
+and its own arbitrary positive finite inaccessible memory. Each member of a pair
+has independent realization data. The circuit model covers deterministic physical
+superchannels by the established realization theorem of Chiribella, D'Ariano and
+Perinotti, Theorem 1, Eq. (23): https://arxiv.org/pdf/0804.0180
+That representation theorem is cited, not newly formalized by C31.
+
+referenceRealization tensors both physical teeth with id_R and explicitly moves R
+past the inaccessible memory before inserting the entire joint map AR -> BR.
+The insertion is arbitrary CPTP, rather than being required to be N tensor id_R.
+The outer r ranges over every positive natural number. Each inner amortized
+channel divergence has its own independently bound positive external dimension s.
+The state-based ordinary quantity is precisely Hirche Eq. (33).
+
+The state and output-channel forms of the ordinary stabilized supremum also have
+an independent mathematical reference-absorption argument: replace inserted R by
+R tensor S and insert N tensor id_S, then reorder the tested state and output
+indices. This reproduces each externally amplified channel test. The reverse
+inclusion uses S of dimension one. This argument does not assume C31's collapse;
+no new Lean reference-absorption theorem is asserted by this review.
+
+geometricStateDivergence uses the actual matrix-range support relation, spectral
+inverse square root vanishing on the kernel, real spectral powers, and base-two
+logarithms. Unsupported pairs return +infinity. Its non-Hermitian fallback is
+unused on the normalized physical states. Finite real witnesses specify the
+entire input supremum, rather than selected state-test costs or bounds. Both
+amortized definitions retain every finite-cost term without clipping negative
+differences, and never subtract infinity from infinity.
+
+The earlier C18 result concerns insertions restricted to A -> B and remains a
+different, narrower theorem. C31 supplies the inserted-reference quantifier whose
+absence invalidated C18 as a resolution of the intended source question.
+
+3. Why intermediate regularity conditions do not weaken the final theorem
+
+The final assembly quantifies every real 1 < alpha <= 2 without extra hypotheses.
+Supported comb pairs are handled by the singular support inverse and an all-real
+order transformer theorem. Orders below two use an integral representation with
+the required integrability proved; the endpoint is treated separately.
+
+Finite input cost supplies Choi support and the partial-trace moment bound through
+admissible equal-input pure tests. No channel-collapse theorem is assumed as a
+premise. The tester construction and marginal-slack completion bound all inserted
+and external reference dimensions uniformly. Positive definite testers are
+physically realized using one common input/output reference of dimension c*a*b.
+The inserted channel is completed on the unused input subspace, so its trace
+preservation holds globally. Linear mixing extends tester bounds to singular
+testers. The proof derives a sufficient reference dimension; the target still
+optimizes all positive finite dimensions.
+
+For unsupported comb pairs, the realization produces an unsupported ordinary
+output pair. Its value is +infinity. The ordinary-to-amortized lower bound uses
+equal insertions with entire input cost zero, so the amortized value is also
++infinity. Thus support and invertibility conditions on intermediate lemmas are
+discharged rather than attached to the universal conclusion.
+
+4. Prior work and provenance
+
+No earlier published proof of this exact reference-stabilized nested superchannel
+equality was located. The live QIQCOP record still labels the geometric case
+Unsolved, last edited 2026-09-25:
+  https://qiqc-op.com/problem/op_1482756b02794495/
+This is evidence about catalogue status, not a proof of novelty.
+
+Fang and Fawzi's established channel Choi formula, geometric channel chain rule,
+amortization collapse and transformer inequality are essential prior ingredients:
+  https://arxiv.org/pdf/1909.05758
+Their paper proves the ordinary-channel result. It does not state C31's nested
+superchannel equality. The inspected works of Gour, Zambon, Das-Goswami-Pandey,
+Fang-Gour-Wang, Fawzi-Kochanowski-Rouze-Van Himbeeck, and Khatri likewise supplied
+no earlier statement of this exact result. literature.json records primary
+sources, search families, distinctions and retrieval limitations. Direct arXiv
+search-page retrieval failed, while individual papers and indexed searches worked.
+Unpublished work, different terminology and incomplete indexing cannot be excluded.
+
+The proof did already exist locally: C31 registers earlier unaccepted critic
+scratch from e002-i01/e002-i02, ported into 16 StabilizedProof modules. Its final
+wrapper applies StabilizedProofAlphaMain.referenceStabilizedMainStatement_holds.
+The earlier reviewer disclosed authorship of that scratch. Registration is not
+new proof authorship, and should not be described as an independently discovered
+second proof. This review independently checks the current registered sources,
+their theorem type, their interpretation and their fresh kernel replay.
+
+C31 concerns Eq. (39), with Eq. (33) on the right. Hirche's larger fully amortized
+quantity in Eq. (40), general multi-slot combs, and alpha=1 are outside this
+statement. Accepting C31 does not resolve those separate questions or certify
+priority in the literature.
+
+5. Review decision
+
+Accept C31 as a resolution of the locked corrected nested statement. All required
+fresh source, exact-type, axiom and kernel checks passed. No earlier published
+match was located, and no novelty certificate is claimed.
+
+Record the decision using:
+  lean-orch review op_1482756b02794495 --accept
+
+The command was executed and exited zero. The running orchestrator reported:
+  queued; the running loop applies it at its next safe point
+The running loop then applied the request. A subsequent read of state.json
+confirmed status "solved" and the hint "Human review accepted C31."

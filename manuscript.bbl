@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{CDP08}
+Giulio Chiribella, Giacomo~Mauro D'Ariano, and Paolo Perinotti.
+\newblock Transforming quantum operations: quantum supermaps.
+\newblock {\em EPL}, 83:30004, 2008.
+\newblock arXiv:0804.0180.
+
+\bibitem{FF21}
+Kun Fang and Hamza Fawzi.
+\newblock Geometric r{\'e}nyi divergence and its applications in quantum
+  channel capacities.
+\newblock {\em Communications in Mathematical Physics}, 384:1615--1677, 2021.
+\newblock arXiv:1909.05758.
+
+\bibitem{Hir23}
+Christoph Hirche.
+\newblock Quantum network discrimination.
+\newblock {\em Quantum}, 7:1064, 2023.
+\newblock arXiv:2103.02404.
+
+\bibitem{Zoo}
+{Quantum Information and Quantum Computation Open Problem Zoo}.
+\newblock Amortization collapse for superchannel divergences.
+\newblock \url{https://qiqc-op.com/problem/op_1482756b02794495/}, 2026.
+\newblock Stable ID op\_1482756b02794495; accessed 5 October 2026.
+
+\end{thebibliography}

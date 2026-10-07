@@ -1,0 +1,25 @@
+# Downloaded dependencies and generated proof binaries
+.lake/
+*.olean
+*.olean.server
+*.ilean
+*.ir
+*.trace
+
+# Results of local reproduction
+/verification-local/
+
+# LaTeX build intermediates; manuscript.pdf and manuscript.bbl are release files
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+/manuscript.log
+
+# Editor and Python caches
+.DS_Store
+__pycache__/
+*.py[cod]
+*~

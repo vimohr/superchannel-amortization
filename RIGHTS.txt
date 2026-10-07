@@ -1,0 +1,34 @@
+Publication package license and attribution
+
+At the owner's instruction on 7 October 2026, the MIT License applies to the
+publication package's project source code, verification scripts, manuscript
+(PDF and LaTeX), documentation, and accompanying original records and metadata.
+The complete license and copyright notice are in LICENSE. Include that notice
+and permission notice in copies or substantial portions of the licensed material.
+Existing comments and proof-provenance headers are preserved.
+
+The current attribution requested by the user on 7 October 2026 credits the
+research and proofs to joint work by GPT-6.1-Sol and Claude Opus 5.5 agents.
+Vinícius Mohr directed the agents to attempt problems on https://qiqc-op.com/
+through https://github.com/vimohr/lean-orchestrator. The orchestrator was built
+using Claude Opus 5.5, according to the owner's account. agents.toml assigns
+research, supervision, literature, and triage to GPT-6.1-Sol and the critic role
+to Claude Opus 5.5. The critic contributed substantive proof material as well
+as review. GPT-6.1-Sol wrote the manuscript.
+
+The MIT-licensed project import closure includes the shared OpenQ foundations
+and required modules from other local problem directories. Their proof
+provenance is recorded in PROVENANCE.md and artifact/prior-audit/.
+
+External Mathlib, Physlib, Lean, and other dependencies retain their own licenses.
+Their binaries are not redistributed in the source bundle. Their source locations
+and pinned revisions are in the Lake manifest. Redistribution of those packages
+must preserve their license terms and notices. Published mathematical ingredients
+remain credited to their cited sources.
+
+The QIQCOP catalogue text and the primary research papers are cited. Their full
+texts are not included in this package. The publication plan and prior local
+audit records are preserved as preparation/provenance evidence.
+
+The selected license does not change the documented scientific contributions,
+proof provenance, or scope of the theorem.

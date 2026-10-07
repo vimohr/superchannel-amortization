@@ -1,0 +1,67 @@
+EXACT TARGET VERIFIED
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.referenceStabilized_collapse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha.transformer_alpha' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha.qform_integral' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain.realized_alpha' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain.cost_bound_alpha' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain.collapse_alpha' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ReferenceStabilizedMainStatement : Prop :=
+∀ (a b c d : ℕ),
+  0 < a →
+    0 < b →
+      0 < c →
+        0 < d →
+          ∀ (α : ℝ),
+            1 < α →
+              α ≤ 2 →
+                ∀ (Θ₁ Θ₂ : PhysicalSuperchannel a b c d),
+                  referenceStabilizedAmortizedDivergence (geometricStateDivergence α) Θ₁ Θ₂ =
+                    referenceStabilizedOrdinaryDivergence (geometricStateDivergence α) Θ₁ Θ₂
+structure OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel (a b c d : ℕ) : Type
+number of parameters: 4
+fields:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.memory : ℕ
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.memory_pos : 0 < self.memory
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.pre : ChannelMap c
+      (a * self.memory)
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.post : ChannelMap
+      (b * self.memory) d
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.pre_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP
+      self.pre
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.post_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP
+      self.post
+constructor:
+  OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.PhysicalSuperchannel.mk {a b c d : ℕ} (memory : ℕ)
+    (memory_pos : 0 < memory) (pre : ChannelMap c (a * memory)) (post : ChannelMap (b * memory) d)
+    (pre_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP pre)
+    (post_cptp : OpenQ.Problems.EqualWeightLowChoiRank_523ed7.IsCPTP post) : PhysicalSuperchannel a b c d
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.geometricStateDivergence : ℝ → StateDivergence :=
+fun α x x_1 x_2 ρ σ ↦ if RangeIncluded ρ σ then ↑(log₂ (geometricMoment α ρ σ) / (α - 1)) else ⊤
+def OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.amortizedChannelDivergence : StateDivergence →
+  {a b : ℕ} → Channel a b → Channel a b → EReal :=
+fun D {a b} N M ↦
+  sSup
+    {v |
+      ∃ r,
+        ∃ (_ : 0 < r),
+          ∃ ρ σ,
+            OpenQ.IsDensityMatrix ρ ∧
+              OpenQ.IsDensityMatrix σ ∧
+                ∃ t,
+                  D (Fin r × Fin a) ρ σ = ↑t ∧
+                    v =
+                      D (Fin r × Fin b) ((OpenQ.Problems.EqualWeightLowChoiRank_523ed7.amplification r ↑N) ρ)
+                          ((OpenQ.Problems.EqualWeightLowChoiRank_523ed7.amplification r ↑M) σ) -
+                        ↑t}

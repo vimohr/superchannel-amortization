@@ -1,0 +1,395 @@
+{
+  "main_module": "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedCollapse",
+  "order": [
+    "OpenQ.Foundations.Basic",
+    "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.Statement",
+    "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChoiCorrespondence",
+    "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChannelCorrespondence",
+    "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.PreparationCircuit",
+    "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.GeneralCircuit",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Statement",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.BasicBounds",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofSpectral",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedAction",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedStatement",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.RegularCombAlgebra",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofQubitMoment",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofBloch",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofScalar",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPureBound",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofConvex",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofMixedBound",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofChannelBound",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofLiteral",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofNonnegative",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPreparation",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofOrthogonal",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofTrivial",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain",
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedCollapse"
+  ],
+  "sources": {
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedCollapse": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedCollapse.lean",
+      "sha256": "1c76a334619c4c71bc1ed3cd7d95eaa5fc40b4d31d2462ce7b71a0a78a52d7d0",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaMain": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaMain.lean",
+      "sha256": "c444b05206360ba3605a5a4d2c293a82ef9b883d2d361b50d3bcbd9a66188c20",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlphaChain": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlphaChain.lean",
+      "sha256": "fbd910761468ccb9e97fa80da5ea0a48af88c9c3b3cedba1b29394b645905938",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofAlpha": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofAlpha.lean",
+      "sha256": "01a106e9b8d34d8a90716dc9ef02f68873d1eb175ce4b610a3d8421e204cd6ed",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue",
+        "Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.IntegralRepresentation"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannelValue.lean",
+      "sha256": "5eda9813f3081ac7d42923d085200eea503cc41a2347c19443f85f6646f990dd",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofLiteral": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofLiteral.lean",
+      "sha256": "6df934a045f7060340fa03f29d38eccf0928078abafd12b3f93a049bfff538e1",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwo": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwo.lean",
+      "sha256": "0a2b5d4434b297dc07e224115b04332aba227c1c9518c471497e4ad137c9c06b",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofRealize": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.lean",
+      "sha256": "98739add3862992f147f2000ef4c3eb0b851a5c591860947781ea9953078c7f1",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofUpper": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofUpper.lean",
+      "sha256": "9f04b2ddc22c1d3b5d7e1800f93e09ead02e999a3a1bfd67cb8205eacfd14066",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannel": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofChannel.lean",
+      "sha256": "ef63bad5bdb7f9c94b41633f91f3abbad9d38ae005680b17deeeb4adb96893a3",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofNonnegative",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofTrivial"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofTester": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofTester.lean",
+      "sha256": "f6097944cc4cbbe23a5fcffd90797ebaad6ecb353f2fbb3a0c537a1e08eabede",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.RegularCombAlgebra",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofOrthogonal"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofComb": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofComb.lean",
+      "sha256": "eaa1d5a28cda33fc60b0b26518198316400f162ad039369778749051db94ec2c",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedStatement"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofDom": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofDom.lean",
+      "sha256": "4f0a2a36c54a1f84330ed0e07e4cc613a10045024a6eccf00569af51a1d006cd",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown",
+        "Mathlib.Data.Matrix.ColumnRowPartitioned",
+        "Mathlib.Analysis.Matrix.Order"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofKnown.lean",
+      "sha256": "f96d1ab7a41f858c675ffad75583bc1e62111a600fb47c6eae6ebfdc4eaaa838",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofDivergence.lean",
+      "sha256": "891bcbcc3093ece798066542db323eb1e52ad50c2f9d1143573f6c6dddf5a90b",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofSpectral"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofSpectral": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofSpectral.lean",
+      "sha256": "f8f75ed9985c5279468885ce69ae655e2f80cf38c5c664d618ee1600fe9abdfb",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.BasicBounds"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.BasicBounds": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/BasicBounds.lean",
+      "sha256": "d36de30e346db79670f127bc8684d2f079d55d05192c0289b000f60ea0b61bfb",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Statement"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Statement": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/Statement.lean",
+      "sha256": "6c81bf1d2898b34d2fc76d30cafb4104b2a4bc8a236d7d3a75dbe7f68a8385b4",
+      "imports": [
+        "OpenQ.Foundations.Basic",
+        "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChannelCorrespondence",
+        "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.GeneralCircuit",
+        "Mathlib.Analysis.Matrix.HermitianFunctionalCalculus",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Data.EReal.Operations"
+      ]
+    },
+    "OpenQ.Foundations.Basic": {
+      "path": "lean/OpenQ/Foundations/Basic.lean",
+      "sha256": "2bb73a3f9a5425f2df20f06f7de854cdcafa7eb0debd26e34b1b67cebab1bc0d",
+      "imports": [
+        "Mathlib.Analysis.Complex.Order",
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.LinearAlgebra.Matrix.Kronecker",
+        "Mathlib.LinearAlgebra.Matrix.Trace"
+      ]
+    },
+    "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChannelCorrespondence": {
+      "path": "lean/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/ChannelCorrespondence.lean",
+      "sha256": "b93800ad747cf2ebe798d0c50e7167d08b603a69e009d803359334399c38e8d8",
+      "imports": [
+        "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChoiCorrespondence",
+        "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.Statement",
+        "QuantumInfo.Channels.Unbundled"
+      ]
+    },
+    "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChoiCorrespondence": {
+      "path": "lean/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/ChoiCorrespondence.lean",
+      "sha256": "96360fc2f8fb41d53e2da0a9f834061f119069c20dfb0ce9f2e214f7c2e90a62",
+      "imports": [
+        "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.Statement",
+        "QuantumInfo.Channels.MatrixMap"
+      ]
+    },
+    "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.Statement": {
+      "path": "lean/OpenQ/Problems/EqualWeightLowChoiRank_523ed7/Statement.lean",
+      "sha256": "52b2344aa995f1a50fc06346de167b821b9959ba730fc94714773e2bdbc051f2",
+      "imports": [
+        "OpenQ.Foundations.Basic",
+        "Mathlib.LinearAlgebra.Matrix.Rank"
+      ]
+    },
+    "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.GeneralCircuit": {
+      "path": "lean/OpenQ/Problems/MultiSlotOverheadVirtualChannel_06e9f0/GeneralCircuit.lean",
+      "sha256": "c62fd2b7af60948333046a59ec250cd3beb1c8cd47b591bdf7b2c77e72ed7e70",
+      "imports": [
+        "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.PreparationCircuit",
+        "Mathlib.LinearAlgebra.Multilinear.Basic"
+      ]
+    },
+    "OpenQ.Problems.MultiSlotOverheadVirtualChannel_06e9f0.PreparationCircuit": {
+      "path": "lean/OpenQ/Problems/MultiSlotOverheadVirtualChannel_06e9f0/PreparationCircuit.lean",
+      "sha256": "931f6b344101d99196caa805947a588d0871bc8cdf0238fa1e021317f0199623",
+      "imports": [
+        "OpenQ.Problems.EqualWeightLowChoiRank_523ed7.ChannelCorrespondence",
+        "Mathlib.Tactic"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedStatement": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedStatement.lean",
+      "sha256": "abd59255e3ea615b2b7d2a6ff030106eb24649943c78dfb8fbfffa150fa12b7c",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedAction"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedAction": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedAction.lean",
+      "sha256": "22bf78ff24447f9e3f28105e214c6963925555d9bb7d005b3e274d04a67d6c38",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.Statement"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofSums": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofSums.lean",
+      "sha256": "2254689f53dbc8485157d215749b3f52ea059c8259b221774536e5346255e87e",
+      "imports": [
+        "Mathlib.Algebra.BigOperators.Fin",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.RegularCombAlgebra": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/RegularCombAlgebra.lean",
+      "sha256": "2c86a8a59840d5a9f2f961edc7225ce7a38f508cc30ec160d21e2a6a8553f32f",
+      "imports": [
+        "OpenQ.Foundations.Basic",
+        "Mathlib.Analysis.Matrix.Order"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofOrthogonal": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofOrthogonal.lean",
+      "sha256": "24d2d0db5a0ea297b8fe35447c9d839b982c6848bb6928b9eb1036ca6be9fc17",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPreparation",
+        "Mathlib.LinearAlgebra.Lagrange",
+        "Mathlib.Analysis.Matrix.Order"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPreparation": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofPreparation.lean",
+      "sha256": "b68b657a39e66a2c21bc36344f7990aada0afd1f9914c2e71d05ef3390300818",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofChannelBound",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofNonnegative",
+        "Mathlib.Analysis.Matrix.Order"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofChannelBound": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofChannelBound.lean",
+      "sha256": "3b9de2ee87beba8f1219dbd4b0f1b9180d131ac8974ec5e598f704a6e4e11d9b",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofMixedBound",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofMixedBound": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofMixedBound.lean",
+      "sha256": "158a76e955945c9d20498db932929a558706bd990dcfdf6bade3c8d49a356ca1",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPureBound",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofConvex"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofPureBound": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofPureBound.lean",
+      "sha256": "d4ba4d5268e4dda3442710fb5ba9822601b51f30c37e82ef7c521fa1dcfc3f54",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofBloch",
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofScalar"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofBloch": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofBloch.lean",
+      "sha256": "26a9d6ef6e68e72f9572c5a5acb481ec2851d0b7cb4aa719501b2adb25414b61",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofQubitMoment"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofQubitMoment": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofQubitMoment.lean",
+      "sha256": "471985694453c967f5fe6f5456a4f7932bf8f23bc545daa1cd71a73ab8b87434",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence",
+        "Mathlib.Analysis.Matrix.Order",
+        "Mathlib.Analysis.Matrix.PosDef"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofScalar": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofScalar.lean",
+      "sha256": "4a8a546a711762918901b73f06b1f07cb66f9eabb7ea8c5178189f7b36b4401a",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+        "Mathlib.Analysis.SpecialFunctions.Sqrt",
+        "Mathlib.Tactic"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofConvex": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofConvex.lean",
+      "sha256": "a0fba1f69ab28734b641eeb1ceeb03b350763793d09b8c2c13f9c9199df19845",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofDivergence",
+        "QuantumInfo.ForMathlib.HayataGroup.TraceInequality.OperatorGeometricMean",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.Analysis.Matrix.Order"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofNonnegative": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofNonnegative.lean",
+      "sha256": "6f1322a0e5a84a4235aefa8200296955c6343b4d6ca71b380ddf50b03d899733",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofLiteral",
+        "Mathlib.Analysis.MeanInequalitiesPow"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofLiteral": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofLiteral.lean",
+      "sha256": "47c39c3079821214cefadad531fa2027fd1c356fd46f9d9081feaa55d32f1921",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofTrivial": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/ProofTrivial.lean",
+      "sha256": "25b764d47722fe60864f8c79ab97d2ec43d7e2e2f7b75da33e2d19704874c30f",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofLiteral"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofReindex": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofReindex.lean",
+      "sha256": "2110898899d9c2dbeb4a02b29fad99c0bfb2e9063511fc1f6f21ba5584b8caf1",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.ProofKnown"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofNonvacuous": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofNonvacuous.lean",
+      "sha256": "9176430e5be22fb84459fb3034853ac0ae57a4ff9d9e059f0eb025065aff8cb7",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims"
+      ]
+    },
+    "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofOrderTwoClaims": {
+      "path": "lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofOrderTwoClaims.lean",
+      "sha256": "8ac9f2d644f2f24fa487c790e9ea1184cdd97cdb866dd9ebdc25bf72e5ba0fc0",
+      "imports": [
+        "OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.StabilizedProofChannelValue"
+      ]
+    }
+  }
+}

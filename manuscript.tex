@@ -1,0 +1,806 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,longtable,array,microtype}
+\usepackage[colorlinks=true,allcolors=blue,breaklinks=true]{hyperref}
+\usepackage{xurl}
+\hypersetup{
+  pdftitle={Amortization collapse for reference stabilized geometric Renyi superchannel divergences},
+  pdfauthor={Vin\'icius Mohr},
+  pdfsubject={Conventional proof and Lean correspondence for reference stabilized nested amortization collapse},
+  pdfkeywords={superchannels, geometric Renyi divergence, amortization collapse, Lean}
+}
+\usepackage{enumitem}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\CP}{\operatorname{CPTP}}
+\newcommand{\Dhat}{\widehat D}
+\newcommand{\G}{G_\alpha}
+\newcommand{\M}{M_\alpha}
+\newcommand{\U}{U_\alpha}
+\newcommand{\Adiv}{\mathcal A_\alpha}
+\newcommand{\pair}[2]{\langle #1,#2\rangle_{\mathrm T}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\newcommand{\bra}[1]{\langle #1\rvert}
+\newcommand{\code}[1]{{\small\nolinkurl{#1}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{Amortization collapse for reference stabilized\ geometric R\'enyi superchannel divergences}
+\author{Vin\'icius Mohr\thanks{The research and proofs were developed jointly by GPT-6.1-Sol and Claude Opus 5.5 agents in an automated research run initiated by Vin\'icius Mohr. GPT-6.1-Sol wrote this manuscript. See the contribution and AI disclosure statement.}\\[0.5em]
+  \small Institute for Theoretical Physics, ETH Zurich\\
+  \small 8093 Zurich, Switzerland}
+\date{5 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For every real order $1<\alpha\leq2$, we prove that the reference stabilized
+geometric R\'enyi divergence of two finite dimensional deterministic physical
+superchannels equals its nested amortized extension. Joint inserted channels
+$AR\to BR$ and the external state references in the inner channel divergences
+range over all positive finite dimensions. The proof combines a supported
+matrix perspective transformer inequality with a comb contraction, a completion
+of positive testers, and a physical realization of positive definite testers.
+It includes singular supported operators and gives value $+\infty$ for
+unsupported comb pairs. In the supported case, the ordinary supremum already
+has the same value at reference dimension $|C||A||B|$. A conventional proof is
+presented alongside a correspondence with a Lean 4 theorem and a reproducible
+source artifact. The result concerns the nested quantity of Hirche's
+Eq.~(39); it does not establish collapse of the larger fully amortized
+quantity in Eq.~(40).
+\end{abstract}
+
+\section{Introduction and scope}
+Amortization measures the distinguishability gained by a transformation after
+subtracting distinguishability already present in its inputs. For geometric
+R\'enyi divergence, Fang and Fawzi established a Choi formula, a channel chain
+rule, and the resulting collapse of ordinary channel amortization
+\cite[Lemmas~5--7]{FF21}. For superchannels, both a channel and a state can
+carry input distinguishability. Hirche distinguishes several corresponding
+amortized quantities \cite[Definitions~4.4--4.5]{Hir23}.
+
+We establish equality between the reference stabilized ordinary quantity in
+Hirche's Eq.~(33) and the nested amortized quantity in Eq.~(39). The additional
+argument beyond ordinary channel collapse is a uniform bound on a tester
+obtained by contracting the insertion and state perspectives. Its marginal
+slack can be completed to a normalized feasible tester. Conversely, a positive
+definite feasible tester can be realized with a single common input and output
+reference, using a pure initial state and a globally trace preserving joint
+insertion. These two steps turn the comb moment bound into the required
+equality of operational suprema.
+
+The QIQCOP record \code{op_1482756b02794495} cites Hirche's question and
+suppresses the inserted-reference labels in its superchannel formulas
+\cite{Zoo}. We state the reference convention explicitly. Restricting the
+insertion to $A\to B$ changes the problem: an external reference attached only
+to the output channel's state tests does not supply a reference through the
+insertion. The theorem below resolves the intended reference stabilized
+nested question. It must not be read as an assertion for that restricted
+convention. Nor does it address the fully amortized quantity in Hirche's
+Eq.~(40), arbitrary multi-slot combs, or the endpoint $\alpha=1$.
+
+The operator transformer estimate and channel chain-rule machinery are
+established ingredients \cite[Lemma~47 and Lemmas~5--7]{FF21}. We give their
+supported singular versions in the form used by the formal proof. Our
+contribution here is the superchannel tester argument and its complete formal
+verification. A bounded search of primary sources did not locate an earlier
+proof of this precise equality; this is not an exhaustive priority claim.
+The accompanying preparation record describes that search and its limits.
+
+\section{Definitions and the main theorem}
+All spaces are complex Hilbert spaces of positive finite dimension. All
+logarithms are to base two. A channel is a complex-linear completely positive
+trace preserving map. A state is positive semidefinite with trace one. Write
+$X\ll Y$ when $\supp X\subseteq\supp Y$ for positive semidefinite operators.
+The symbol $Y^+$ denotes the Moore--Penrose inverse, and $Y^{+1/2}$ its positive
+square root, zero on the kernel of $Y$.
+
+Fix $1<\alpha\leq2$ and put $\kappa=\alpha-1$. For positive semidefinite $X,Y$,
+define the matrix perspective and its moment by
+\begin{equation}\label{eq:perspective}
+ \G(X,Y)=Y^{1/2}(Y^{+1/2}XY^{+1/2})^\alpha Y^{1/2},
+ \qquad \M(X,Y)=\Tr\G(X,Y).
+\end{equation}
+On supported states the geometric divergence is
+\begin{equation}\label{eq:state}
+ \Dhat_\alpha(\rho\Vert\sigma)=\frac{1}{\kappa}\log_2\M(\rho,\sigma);
+ \qquad \Dhat_\alpha(\rho\Vert\sigma)=+\infty\quad\text{if }\rho\not\ll\sigma.
+\end{equation}
+Although the matrix expression in \eqref{eq:perspective} is defined for all
+positive semidefinite pairs, only supported pairs are assigned a finite
+divergence by \eqref{eq:state}.
+
+For channels $N,M:P\to Q$, let
+\begin{align}
+ d_\alpha(N\Vert M)
+ &=\sup_{S,\rho_{SP}}\Dhat_\alpha((\id_S\otimes N)(\rho)\Vert
+                                  (\id_S\otimes M)(\rho)),\label{eq:channel}\\
+ d^A_\alpha(N\Vert M)
+ &=\sup_{\substack{S,\rho_{SP},\sigma_{SP}\\
+                    \Dhat_\alpha(\rho\Vert\sigma)<\infty}}
+ \left\{\Dhat_\alpha((\id_S\otimes N)(\rho)\Vert
+                     (\id_S\otimes M)(\sigma))
+              -\Dhat_\alpha(\rho\Vert\sigma)\right\}.\label{eq:channelA}
+\end{align}
+Here and below $S$ ranges over every positive finite dimension. The
+finite-cost restriction permits every finite real cost and retains negative
+differences. In particular it never subtracts $\infty$ from $\infty$.
+
+A physical deterministic superchannel taking $A\to B$ channels to $C\to D$
+channels has a realization
+\begin{equation}\label{eq:physical}
+ \Theta(N)=Q_\Theta\circ(N\otimes\id_{E_\Theta})\circ P_\Theta,
+ \qquad P_\Theta:C\to AE_\Theta,
+ \quad Q_\Theta:BE_\Theta\to D,
+\end{equation}
+where both maps are channels and the inaccessible memory $E_\Theta$ is finite.
+Every finite dimensional deterministic physical supermap has such a
+realization by the established realization theorem
+\cite[Theorem~1, Eq.~(23)]{CDP08}. This representation theorem is cited as
+background; it is not a new formal theorem of our artifact. Each superchannel
+in a pair may have its own memory and its own realization.
+
+For $N:AR\to BR$, the extended action $\Theta^R(N):CR\to DR$ applies
+$P_\Theta\otimes\id_R$, moves $R$ past $E_\Theta$, applies
+$N\otimes\id_{E_\Theta}$, and applies $Q_\Theta\otimes\id_R$ after reversing
+the corresponding reordering. The insertion acts on the entire $AR$ input;
+it need not have product form. Define
+\begin{align}
+ \U(\Theta_1\Vert\Theta_2)
+ &=\sup_{R,\,N:AR\to BR,\,\rho_{CR}}
+   \Dhat_\alpha(\Theta_1^R(N)(\rho)\Vert\Theta_2^R(N)(\rho)),\label{eq:ordinary}\\
+ \Adiv(\Theta_1\Vert\Theta_2)
+ &=\sup_{\substack{R,\,N,M:AR\to BR\\d^A_\alpha(N\Vert M)\in\mathbb R}}
+   \left\{d^A_\alpha(\Theta_1^R(N)\Vert\Theta_2^R(M))
+                            -d^A_\alpha(N\Vert M)\right\}.\label{eq:nested}
+\end{align}
+The inserted reference $R$ ranges over all positive finite dimensions. Each
+occurrence of $d^A_\alpha$ independently optimizes its external state reference
+$S$. The subtracted term in \eqref{eq:nested} is the entire input-channel
+supremum, not the cost of a selected state test. These are precisely the
+domains of Hirche's Eqs.~(33) and (39) \cite{Hir23}.
+
+\begin{theorem}[Reference stabilized nested collapse]\label{thm:main}
+For every $a=|A|,b=|B|,c=|C|,d=|D|>0$, every real $1<\alpha\leq2$, and every
+ordered pair of physical deterministic superchannels as in
+\eqref{eq:physical},
+\begin{equation}\label{eq:collapse}
+ \Adiv(\Theta_1\Vert\Theta_2)=\U(\Theta_1\Vert\Theta_2).
+\end{equation}
+Equality is in the extended real numbers and has no additional support,
+invertibility, common-memory, or channel-collapse hypothesis.
+\end{theorem}
+
+\begin{proposition}[Ordinary reference absorption]\label{prop:absorb}
+The ordinary quantity also has the output-channel form
+\begin{equation}\label{eq:absorb}
+ \U(\Theta_1\Vert\Theta_2)=
+ \sup_{R,N:AR\to BR}d_\alpha(\Theta_1^R(N)\Vert\Theta_2^R(N)).
+\end{equation}
+\end{proposition}
+\begin{proof}
+An ordinary state test in \eqref{eq:ordinary} is a channel test with a
+one-dimensional $S$, giving one inequality. Conversely, fix a channel test
+with references $R,S$ and state $\rho_{SCR}$. Set $R'=R\otimes S$ and, after
+the canonical tensor permutations, insert $N'=N\otimes\id_S:AR'\to BR'$.
+Tensoring each tooth of \eqref{eq:physical} by $\id_S$ shows, on every matrix,
+\[
+ \Theta_i^{R'}(N')=\Theta_i^R(N)\otimes\id_S
+\]
+in the reordered bases, simultaneously for $i=1,2$. Move the state to
+$CR'$ using the same permutation. The output pair is the channel-test pair
+up to a unitary permutation, preserving both supports and
+\eqref{eq:state}. This supplies an ordinary test for every external-reference
+channel test and proves the reverse inequality. This argument is independent
+of amortization collapse; it is a mathematical correspondence argument, not
+a separately registered Lean theorem in this artifact.
+\end{proof}
+
+\section{The supported matrix transformer estimate}
+\begin{lemma}[Transformer and congruence identities]\label{lem:transform}
+If $X,Y\geq0$ and $X\ll Y$, then for every rectangular matrix $K$,
+\begin{equation}\label{eq:transform}
+ KXK^\dagger\ll KYK^\dagger,
+ \qquad \G(KXK^\dagger,KYK^\dagger)\leq K\G(X,Y)K^\dagger.
+\end{equation}
+If $K$ has a two-sided inverse, the operator inequality is an equality and
+support inclusion is equivalent before and after congruence. Moreover,
+\begin{align}
+ \G(X_1\otimes X_2,Y_1\otimes Y_2)
+   &=\G(X_1,Y_1)\otimes\G(X_2,Y_2),\label{eq:tensor}\\
+ \G(X,X)&=X.\label{eq:self}
+\end{align}
+The tensor identity holds for positive semidefinite arguments, and the
+corresponding tensor pair is supported whenever both factors are.
+\end{lemma}
+\begin{proof}
+First consider $\alpha=2$. On a supported pair,
+$G_2(X,Y)=XY^+X$. The block matrix
+\begin{equation}\label{eq:block}
+ \begin{pmatrix}Y&X\\X&XY^+X\end{pmatrix}
+ =\begin{pmatrix}Y^{1/2}\\XY^{+1/2}\end{pmatrix}
+  \begin{pmatrix}Y^{1/2}\\XY^{+1/2}\end{pmatrix}^{\!\dagger}
+ \geq0.
+\end{equation}
+Here the support relation makes the off-diagonal blocks equal to $X$.
+In a positive block matrix $\left(\begin{smallmatrix}Y'&X'\\X'&T'\end{smallmatrix}\right)$,
+a vector in $\ker Y'$ gives a zero quadratic form on the upper block and
+therefore belongs to $\ker X'$. Thus $X'\ll Y'$. Evaluating the block
+quadratic form on $(-Y'^+X'v,v)$ gives $T'\geq X'Y'^+X'$.
+Apply these facts to the congruence of \eqref{eq:block} by
+$\operatorname{diag}(K,K)$ to obtain \eqref{eq:transform} at order two,
+including singular denominators.
+
+For $1<\alpha<2$, use the positive scalar representation
+\begin{equation}\label{eq:integral}
+ x^\alpha=c_\alpha\int_0^\infty t^{\alpha-2}\frac{x^2}{x+t}\,dt,
+ \qquad c_\alpha=\frac{\sin(\pi(\alpha-1))}{\pi}>0,\quad x\geq0.
+\end{equation}
+For $x>0$ substitution $t=xu$ and the beta integral give this identity; for
+$x=0$ both sides vanish. The integrand is $O(t^{\alpha-2})$ near zero and
+$O(t^{\alpha-3})$ at infinity, hence is integrable in the stated range.
+Diagonalize $Z=Y^{+1/2}XY^{+1/2}$. On $\supp Y$, $Y$ is invertible and
+\[
+ X(X+tY)^+X=Y^{1/2}Z(Z+tI)^{-1}ZY^{1/2},\qquad t>0.
+\]
+Both sides vanish on the complementary kernel. Applying
+\eqref{eq:integral} to each eigenvalue of $Z$ therefore gives the integrable
+quadratic-form identity
+\begin{equation}\label{eq:matrixintegral}
+ v^\dagger\G(X,Y)v
+ =c_\alpha\int_0^\infty t^{\alpha-2}
+                v^\dagger X(X+tY)^+Xv\,dt.
+\end{equation}
+This is a finite sum of the integrable scalar expressions just considered.
+
+For every $t>0$, $X\ll X+tY$. Apply the order-two transformer estimate to
+$(X,X+tY)$; its congruent denominator is $KXK^\dagger+tKYK^\dagger$.
+Integrating its quadratic forms against the positive weight in
+\eqref{eq:matrixintegral} proves \eqref{eq:transform}. Support preservation
+already follows from the block argument. For invertible $K$, applying the
+inequality again with $K^{-1}$ gives the reverse operator inequality;
+the same reverse congruence proves support equivalence.
+
+Finally, spectral calculus on tensor-product eigenbases gives
+$(Y_1\otimes Y_2)^{+1/2}=Y_1^{+1/2}\otimes Y_2^{+1/2}$ and
+$(Z_1\otimes Z_2)^\alpha=Z_1^\alpha\otimes Z_2^\alpha$, proving
+\eqref{eq:tensor}. For equal arguments the middle sandwich is the support
+projection of $X$, whose $\alpha$th power is itself, proving
+\eqref{eq:self}. Tensor support inclusion follows, for example, by writing
+$X_i=Y_iZ_i'$ and tensoring these factorizations.
+\end{proof}
+
+This transformer statement is the established estimate of
+Fang--Fawzi \cite[Lemma~47]{FF21}; the preceding proof follows the Lean
+construction through block positivity and the all-real-order integral.
+Lean uses Mathlib's positive representing measure for the scalar power
+identity, rather than fixing the explicit density $c_\alpha\,dt$.
+
+\begin{lemma}[Normalization and data processing]\label{lem:dp}
+Supported states satisfy $\M(\rho,\sigma)\geq1$ and
+$\Dhat_\alpha(\rho\Vert\rho)=0$. For every channel $N$,
+\begin{equation}\label{eq:dp}
+ \Dhat_\alpha((\id_S\otimes N)(\rho)\Vert(\id_S\otimes N)(\sigma))
+ \leq\Dhat_\alpha(\rho\Vert\sigma),\qquad d^A_\alpha(N\Vert N)=0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Diagonalize $Z=\sigma^{+1/2}\rho\sigma^{+1/2}$. The diagonal entries of
+$\sigma$ in this eigenbasis are nonnegative weights summing to one, and
+their weighted average of the eigenvalues of $Z$ is $\Tr\rho=1$.
+Scalar convexity of $x^\alpha$ gives $\M(\rho,\sigma)\geq1$.
+Equation~\eqref{eq:self} gives the assertion on equal states.
+
+Use the input-first unnormalized channel Choi matrix
+\begin{equation}\label{eq:choi}
+ (J_N)_{(i,\beta),(j,\gamma)}=N(\ket{i}\bra{j})_{\beta\gamma},
+ \qquad J_N\geq0,\quad\Tr_QJ_N=I_P.
+\end{equation}
+The amplified action on $Z'$ has entries
+\[
+ [\mathcal C(J_N,Z')]_{(\ell,\beta),(\ell',\gamma)}
+ =\sum_{i,j}(J_N)_{(i,\beta),(j,\gamma)}Z'_{(\ell,i),(\ell',j)}.
+\]
+It is a congruence of $J_N\otimes Z'$, obtained by linking the repeated
+input labels. Apply Lemma~\ref{lem:transform}, \eqref{eq:tensor}, and
+\eqref{eq:self} to $(J_N\otimes\rho,J_N\otimes\sigma)$. The output pair is
+supported, and its moment is at most
+$\Tr\mathcal C(J_N,\G(\rho,\sigma))=\Tr\G(\rho,\sigma)$, using
+$\Tr_QJ_N=I_P$. Taking logarithms proves \eqref{eq:dp} on finite-cost
+pairs; infinite input divergence makes the inequality automatic. Every
+admissible term in $d^A_\alpha(N\Vert N)$ is therefore at most zero, while
+equal input states supply the value zero. This proves its asserted value.
+\end{proof}
+
+\section{The full finite input-channel cost}
+\begin{lemma}[Choi moment bound from the entire cost]\label{lem:cost}
+Let $N,M:P\to Q$, with $p=|P|>0$, and suppose
+$d^A_\alpha(N\Vert M)=t\in\mathbb R$. Then
+\begin{equation}\label{eq:costbound}
+ J_N\ll J_M,\qquad
+ \Tr_Q\G(J_N,J_M)\leq 2^{\kappa t}I_P.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For every invertible $K$ on $P$ with $\Tr K^\dagger K=1$, use the equal pure
+input states $\phi_K=\ket{\phi_K}\bra{\phi_K}$, where
+$\ket{\phi_K}=(K\otimes I_P)\sum_i\ket{i}\ket{i}$. Their input divergence
+is zero, so their output divergence is at most the full supremum $t$.
+The two output states are
+$(K\otimes I_Q)J_N(K^\dagger\otimes I_Q)$ and the corresponding expression
+for $J_M$. The choice $K=I_P/\sqrt p$ and finiteness of $t$ force
+$J_N\ll J_M$ by invertible congruence.
+
+Set $F=\G(J_N,J_M)$ and $E=\Tr_QF$. Congruence equality from
+Lemma~\ref{lem:transform} gives, for every such $K$,
+\[
+ \Tr(EK^\dagger K)=\M((\id\otimes N)(\phi_K),(\id\otimes M)(\phi_K))
+                       \leq2^{\kappa t}.
+\]
+Every positive definite trace-one $\eta$ has the form $K^\dagger K$ for an
+invertible $K$. For a unit vector $v$, apply this trace bound to
+$\eta_\varepsilon=(1-\varepsilon)\ket v\bra v+\varepsilon I_P/p$ and
+let $\varepsilon\downarrow0$. It follows that
+$v^\dagger Ev\leq2^{\kappa t}$ for every $v$, which is exactly
+\eqref{eq:costbound}. No channel amortization-collapse assumption was used.
+\end{proof}
+
+\section{Comb contractions and tester completion}
+Fix computational bases and order the comb space as $C\otimes A\otimes
+B\otimes D$. Define $J_\Theta$ from the two teeth of
+\eqref{eq:physical} by
+\begin{equation}\label{eq:comb}
+ (J_\Theta)_{(j,i,k,\delta),(j',i',k',\delta')}
+ =\sum_{e,f}
+ (J_{P_\Theta})_{(j,i,e),(j',i',f)}
+ (J_{Q_\Theta})_{(k,e,\delta),(k',f,\delta')}.
+\end{equation}
+This is positive semidefinite: using Kraus operators $p_h,q_g$ of the two
+teeth, it is $\sum_{h,g}\ket{v_{hg}}\bra{v_{hg}}$ with amplitudes
+$v_{hg}(j,i,k,\delta)=\sum_e(p_h)_{i e,j}(q_g)_{\delta,k e}$.
+
+Write $x=(j,i,k)\in C\otimes A\otimes B$. Given an insertion reference $R$
+and state reference $S$, define the trilinear contraction
+\begin{align}\label{eq:contraction}
+ &[\mathcal L_{r,s}(J,F,H)]_{(\ell,\delta,t),(\ell',\delta',t')}
+ \\
+ &\qquad=\sum_{x,y,u,v}
+ J_{(x,\delta),(y,\delta')}
+ F_{(i,u;k,t),(i',v;k',t')}
+ H_{(\ell,j,u),(\ell',j',v)},\notag
+\end{align}
+where $y=(j',i',k')$, $u,v,t,t'$ are reference labels in $R$, and
+$\ell,\ell'$ are labels in $S$. Expanding the two teeth and the inserted
+channel on matrix units gives the full action identity
+\begin{equation}\label{eq:action}
+ (\id_S\otimes\Theta^R(N))(\rho)
+                 =\mathcal L_{r,s}(J_\Theta,J_N,\rho).
+\end{equation}
+It holds for every matrix and every complex-linear insertion. In particular
+it is not limited to product states or product insertions.
+
+For completeness, \eqref{eq:contraction} is a congruence
+$K_{r,s}(J\otimes F\otimes H)K_{r,s}^\dagger$, where
+\[
+ K_{r,s}=\sum_{\ell,\delta,t}\sum_{j,i,k,u}
+ \ket{\ell,\delta,t}
+ (\bra{j,i,k,\delta}\otimes\bra{i,u;k,t}\otimes\bra{\ell,j,u}).
+\]
+Thus, for three supported positive pairs, Lemma~\ref{lem:transform} gives
+\begin{align}\label{eq:combchain}
+ &\M(\mathcal L(J_1,J_N,\rho),\mathcal L(J_2,J_M,\sigma))
+ \\
+ &\qquad\leq\Tr\mathcal L(\G(J_1,J_2),\G(J_N,J_M),\G(\rho,\sigma)),\notag
+\end{align}
+and also gives support inclusion for the contracted pair.
+
+For $W,\Gamma$ on $C\otimes A\otimes B$ use the full-transpose pairing
+\begin{equation}\label{eq:pairing}
+ \pair{W}{\Gamma}=\Re\Tr(W\Gamma^{\mathsf T})
+                     =\Re\sum_{x,y}W_{xy}\Gamma_{xy}.
+\end{equation}
+This uses the transpose of the entire tester in the fixed basis, not a
+partial transpose. If $W,\Gamma\geq0$ it is nonnegative; if
+$\Gamma'\geq\Gamma$ it is monotone. Call $\Gamma$ feasible if
+\begin{equation}\label{eq:feasible}
+ \Gamma\geq0,\qquad\Tr_B\Gamma=\tau_C\otimes I_A,
+ \qquad\tau_C\geq0,\quad\Tr\tau_C=1.
+\end{equation}
+
+\begin{lemma}[Tester completion]\label{lem:tester}
+Let $J,F,H\geq0$, put $W=\Tr_DJ$, and suppose
+\[
+ \Tr_{BR}F\leq qI_{AR},\quad q>0,\qquad\Tr H=m>0.
+\]
+If $\pair{W}{\Gamma}\leq Q$ for every feasible tester, then
+\begin{equation}\label{eq:tracebound}
+ \Tr\mathcal L_{r,s}(J,F,H)\leq qmQ.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Define the contracted tester $T$ on $C\otimes A\otimes B$ by
+\begin{equation}\label{eq:tester}
+ T_{(j,i,k),(j',i',k')}=
+ \sum_{t,\ell,u,v}F_{(i,u;k,t),(i',v;k',t)}
+                       H_{(\ell,j,u),(\ell,j',v)}.
+\end{equation}
+For each $t,\ell$ this is a congruence of $F\otimes H$, linking the
+reference label, and summing these congruences proves $T\geq0$.
+Taking the trace in \eqref{eq:contraction} yields
+\begin{equation}\label{eq:tracepair}
+ \Tr\mathcal L_{r,s}(J,F,H)=\pair{W}{T}.
+\end{equation}
+Both traces here are real for the positive arguments.
+
+Let $Y=\Tr_{SR}H$, a positive operator on $C$ with $\Tr Y=m$.
+The $B$ marginal of $T$ is obtained by the same positive contraction from
+$\Tr_{BR}F$ and $H$. More explicitly, the relevant map sends $E$ on $AR$ to
+the matrix on $CA$ with entries
+\[
+ \mathcal B_H(E)_{(j,i),(j',i')}=
+ \sum_{\ell,u,v}E_{(i,u),(i',v)}H_{(\ell,j,u),(\ell,j',v)}.
+\]
+For $E\geq0$, its value is a sum of congruences of $E\otimes H$, hence is
+positive. It satisfies
+$\mathcal B_H(\Tr_{BR}F)=\Tr_BT$ and
+$\mathcal B_H(I_{AR})=Y\otimes I_A$. Consequently
+\[
+ \Delta=q(Y\otimes I_A)-\Tr_BT\geq0.
+\]
+Complete and normalize the tester by
+\begin{equation}\label{eq:completion}
+ \widetilde\Gamma=\frac{T+\Delta\otimes I_B/b}{qm}.
+\end{equation}
+It is positive, its $B$ marginal is $(Y/m)\otimes I_A$, and $Y/m$ is a
+state, so it is feasible. Since the added slack is positive,
+$\pair{W}{T}\leq qm\pair{W}{\widetilde\Gamma}\leq qmQ$.
+Together with \eqref{eq:tracepair} this proves the bound for all $r,s$.
+\end{proof}
+
+\begin{proposition}[Uniform bound for nested amortization]\label{prop:upper}
+Suppose $J_1=J_{\Theta_1}\ll J_2=J_{\Theta_2}$ and set
+$W_\alpha=\Tr_D\G(J_1,J_2)$. If $Q>0$ bounds
+$\pair{W_\alpha}{\Gamma}$ for every feasible tester, then
+\begin{equation}\label{eq:upper}
+ \Adiv(\Theta_1\Vert\Theta_2)\leq\kappa^{-1}\log_2Q.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Fix an admissible pair $N,M:AR\to BR$ and write its entire cost as
+$t=d^A_\alpha(N\Vert M)\in\mathbb R$. By Lemma~\ref{lem:cost},
+$J_N\ll J_M$ and $F=\G(J_N,J_M)$ has output marginal at most
+$qI_{AR}$, with $q=2^{\kappa t}$. Fix any admissible inner test
+$\rho,\sigma$ on $SCR$. Its finite cost gives $\rho\ll\sigma$, and
+$H=\G(\rho,\sigma)$ has trace $m=\M(\rho,\sigma)\geq1$.
+Equations~\eqref{eq:action} and \eqref{eq:combchain}, followed by
+Lemma~\ref{lem:tester}, give output support inclusion and
+\begin{equation}\label{eq:uniform}
+ \M((\id_S\otimes\Theta_1^R(N))(\rho),
+     (\id_S\otimes\Theta_2^R(M))(\sigma))
+       \leq 2^{\kappa t}\M(\rho,\sigma)Q.
+\end{equation}
+The supported output states have moment at least one. Taking logarithms
+therefore yields
+\[
+ \Dhat_\alpha(\mathrm{output}_1\Vert\mathrm{output}_2)
+          -\Dhat_\alpha(\rho\Vert\sigma)
+ \leq t+\kappa^{-1}\log_2Q.
+\]
+Take the inner supremum, subtract exactly $t$, then take the outer
+supremum. This proves \eqref{eq:upper}. All support and reference conditions
+used above were obtained from the admissible finite costs.
+\end{proof}
+
+\section{Physical realization of testers}
+\begin{lemma}[Common-reference realization]\label{lem:realize}
+For every positive definite feasible tester $\Gamma$ whose marginal state
+$\tau$ is positive definite, there are a reference $R$ of dimension
+$r_*=cab$, a channel $N:AR\to BR$, a pure state $\rho_{CR}$, and an invertible
+matrix $K_T:CABD\to DR$ such that, for every physical $\Theta$,
+\begin{equation}\label{eq:realizedoutput}
+ \Theta^R(N)(\rho)=K_TJ_\Theta K_T^\dagger.
+\end{equation}
+For supported $J_1\ll J_2$, this gives
+\begin{equation}\label{eq:realizedmoment}
+ \M(\Theta_1^R(N)(\rho),\Theta_2^R(N)(\rho))
+             =\pair{W_\alpha}{\Gamma}\geq1.
+\end{equation}
+For an unsupported comb pair, the same test has unsupported outputs.
+\end{lemma}
+\begin{proof}
+Choose invertible factors $T,\psi$ with
+$\Gamma=TT^\dagger$ and $\tau=\psi\psi^\dagger$. Identify the basis of $R$
+with $C\otimes A\otimes B$, and fix labels $i_0,k_0$ to embed
+$\iota:C\hookrightarrow R$, $u\mapsto(u,i_0,k_0)$. Prepare
+\begin{equation}\label{eq:phi}
+ \ket\phi=\sum_{j,u}\psi_{ju}\ket j_C\ket{\iota(u)}_R,
+ \qquad\rho=\ket\phi\bra\phi.
+\end{equation}
+Its norm is one because $\Tr\tau=1$.
+
+On the input subspace $A\otimes\iota(C)$, define a matrix $V:AR\to BR$ by
+\begin{equation}\label{eq:v}
+ V_{(k,t),(i,\iota(u))}=\sum_j(\psi^{-1})_{uj}T_{(j,i,k),t},
+\end{equation}
+and set it to zero on the orthogonal complement. The marginal equation
+for $TT^\dagger$ gives
+\begin{align*}
+ \sum_{k,t}V_{(k,t),(i,\iota(u))}
+             \overline{V_{(k,t),(i',\iota(u'))}}
+ &=\delta_{ii'}[\psi^{-1}\tau(\psi^{-1})^\dagger]_{uu'}\\
+ &=\delta_{ii'}\delta_{uu'}.
+\end{align*}
+Thus $V$ is an isometry on that subspace. If $P$ is its input projection and
+$\ket{\beta_0}$ a fixed unit vector in $BR$, set
+\begin{equation}\label{eq:insertion}
+ N(X)=VXV^\dagger+\Tr((I-P)X)\ket{\beta_0}\bra{\beta_0}.
+\end{equation}
+The reset term has Kraus operators
+$\ket{\beta_0}\bra{i,w}$ for basis vectors outside the embedded subspace.
+Their adjoint products sum to $I-P$, while $V^\dagger V=P$. Hence $N$ is
+completely positive and trace preserving on the entire input space,
+including unused input vectors. The reset term vanishes on the chosen
+initial state's reference support and after the preprocessing tooth.
+
+The decisive contraction identity is
+\[
+ \sum_u V_{(k,t),(i,\iota(u))}\psi_{ju}=T_{(j,i,k),t}.
+\]
+Insert it and its conjugate into \eqref{eq:contraction}, with $S$ trivial.
+This proves \eqref{eq:realizedoutput}, where
+\begin{equation}\label{eq:kt}
+ (K_T)_{(\delta,t),(x,\delta')}=\delta_{\delta\delta'}T_{x,t}.
+\end{equation}
+Since $r_*=cab$, this is, up to a tensor permutation, $T^{\mathsf T}$
+tensored with $I_D$. It has a two-sided inverse obtained from
+$(T^{-1})^{\mathsf T}$ and the reverse permutation.
+
+For supported $J_1,J_2$, Lemma~\ref{lem:transform} gives perspective equality
+under this congruence. Taking traces and summing the output reference label,
+\begin{align*}
+ \Tr K_T\G(J_1,J_2)K_T^\dagger
+ &=\sum_{x,y,\delta,t}\G(J_1,J_2)_{(x,\delta),(y,\delta)}
+                                  T_{x,t}\overline{T_{y,t}}\\
+ &=\pair{W_\alpha}{TT^\dagger}=\pair{W_\alpha}{\Gamma}.
+\end{align*}
+Both outputs are normalized physical states, giving the last inequality in
+\eqref{eq:realizedmoment}. For an unsupported pair, invertibility of $K_T$
+preserves failure of support inclusion, so its output divergence is
+$+\infty$. The construction depends on the tester, not on a choice of
+superchannel realization, and works simultaneously for both members of
+the pair with their separate memories.
+\end{proof}
+
+\section{Assembly of the equality and the tester formula}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Lemma~\ref{lem:dp} shows that equal insertions $N=M$ have entire input cost
+zero. For each ordinary state test choose these equal insertions in the
+outer amortization and equal states with a trivial external reference in
+the inner amortization. Consequently, without any comb support assumption,
+\begin{equation}\label{eq:lower}
+ \U(\Theta_1\Vert\Theta_2)\leq\Adiv(\Theta_1\Vert\Theta_2).
+\end{equation}
+
+First assume $J_1\ll J_2$ and use $W_\alpha$ as above. Every feasible tester
+has trace $a$, so positivity gives
+\begin{equation}\label{eq:crude}
+ 0\leq\pair{W_\alpha}{\Gamma}\leq a\Tr W_\alpha.
+\end{equation}
+Indeed, for positive $B,P$, $\Tr BP\leq\Tr B\Tr P$, which follows by
+diagonalizing $P$ and bounding each eigenvalue by its trace. Apply this
+with $P=\Gamma^{\mathsf T}$.
+
+There is a positive definite feasible tester
+\begin{equation}\label{eq:star}
+ \Gamma_*=(I_C/c)\otimes I_A\otimes(I_B/b)=I_{CAB}/(cb).
+\end{equation}
+Its realization has moment $\pair{W_\alpha}{\Gamma_*}\geq1$. Thus
+$Q_0=a\Tr W_\alpha$ is positive and finite. Equations
+\eqref{eq:upper} and \eqref{eq:lower} bound both quantities above by
+$\kappa^{-1}\log_2Q_0$.
+
+Let $U_{r_*}$ denote the ordinary supremum with the inserted reference fixed
+to $r_*=cab$. The realization of $\Gamma_*$ supplies a finite lower bound
+for this supremum, and
+$U_{r_*}\leq\U\leq\Adiv\leq\kappa^{-1}\log_2Q_0$.
+Hence $U_{r_*}=y$ for some finite real number $y$. Realization of every
+positive definite feasible tester gives
+\[
+ \kappa^{-1}\log_2\pair{W_\alpha}{\Gamma}\leq y,
+ \qquad\pair{W_\alpha}{\Gamma}\leq2^{\kappa y}.
+\]
+To extend this bound to any feasible $\Gamma$, form
+$\Gamma_\varepsilon=(1-\varepsilon)\Gamma+\varepsilon\Gamma_*$ with
+$0<\varepsilon<1$. It is positive definite and feasible, with positive
+definite marginal $(1-\varepsilon)\tau+\varepsilon I_C/c$. The pairing
+is affine in $\varepsilon$, so letting $\varepsilon\downarrow0$ gives
+the same bound for $\Gamma$. This step uses only an affine scalar
+expression; no continuity of inverse powers at a singular denominator is
+assumed.
+
+Apply Proposition~\ref{prop:upper} with $Q=2^{\kappa y}$ to conclude
+$\Adiv\leq y$. Therefore
+\[
+ y=U_{r_*}\leq\U\leq\Adiv\leq y,
+\]
+proving collapse and the reference-dimension assertion in the supported case.
+
+If $J_1\not\ll J_2$, realize $\Gamma_*$ instead. Its invertible congruence
+gives unsupported ordinary output states, so $\U=+\infty$.
+Equation~\eqref{eq:lower} then gives $\Adiv=+\infty$ as well. The lower-bound
+test has zero finite input cost, so no subtraction of infinite values occurs.
+This proves the theorem for all physical pairs.
+\end{proof}
+
+\begin{corollary}[Finite tester characterization]\label{cor:formula}
+For $J_1\ll J_2$ put
+\begin{equation}\label{eq:q}
+ Q_\alpha=\sup_{\Gamma\ \mathrm{feasible}}
+                  \pair{\Tr_D\G(J_1,J_2)}{\Gamma}.
+\end{equation}
+Then $1\leq Q_\alpha<\infty$ and
+\begin{equation}\label{eq:formula}
+ \Adiv=\U=U_{cab}=\frac{1}{\alpha-1}\log_2Q_\alpha.
+\end{equation}
+For unsupported comb pairs both divergences are $+\infty$, already witnessed
+at reference dimension $cab$. The asserted reference bound concerns an
+equality of suprema; it makes no claim that an optimizing physical test is
+attained.
+\end{corollary}
+\begin{proof}
+The proof of the theorem gives a finite $y$ with all tester pairings at most
+$2^{\kappa y}$. Any other upper bound $Q'$ is at least the pairing of
+$\Gamma_*$, hence $Q'\geq1$. Proposition~\ref{prop:upper} then gives
+$y=\Adiv\leq\kappa^{-1}\log_2Q'$, so $2^{\kappa y}\leq Q'$.
+Thus $2^{\kappa y}$ is the least upper bound in \eqref{eq:q}.
+The unsupported assertion follows from the same realization used above.
+\end{proof}
+
+\section{Formal verification and correspondence}
+The frozen artifact proves exactly
+\begin{quote}\small\ttfamily
+OpenQ.Problems.\\
+AmortizationCollapseSuperchannelDivergences\_148275.\\
+referenceStabilized\_collapse
+\end{quote}
+with literal target type
+\code{ReferenceStabilizedMainStatement}. The target quantifies all positive
+finite $a,b,c,d$, every real $1<\alpha\leq2$, and every pair of bundled
+physical realizations. It imposes no extra premise. Its state divergence
+uses the actual matrix-range support relation, real spectral powers, the
+support inverse square root, and base-two logarithms. Each finite subtracted
+cost is recorded by a real witness equal to the entire corresponding
+supremum, exactly as in \eqref{eq:channelA} and \eqref{eq:nested}.
+
+The conventional proof follows the formal proof's sequence of supported
+transformer bounds, finite input-cost control, tester completion, physical
+realization, and assembly through the ordinary value at dimension $cab$.
+The following dictionary uses names relative to the namespace displayed
+above. It distinguishes the standard reference-absorption argument of
+Proposition~\ref{prop:absorb}, which is supplied here as a mathematical
+correspondence argument, from the separately formalized collapse.
+
+\small
+\begin{longtable}{@{}p{0.27\textwidth}p{0.68\textwidth}@{}}
+\toprule
+Mathematical step & Lean module and declarations\\\midrule
+\endhead
+Definitions and theorem domain &
+\code{Statement}: \code{PhysicalSuperchannel}, \code{geometricStateDivergence},
+\code{amortizedChannelDivergence}; \code{StabilizedStatement}:
+\code{referenceStabilizedOrdinaryDivergence},
+\code{referenceStabilizedAmortizedDivergence},
+\code{ReferenceStabilizedMainStatement}.\\
+Reference action & \code{StabilizedAction}:
+\code{PhysicalSuperchannel.referenceRealization},
+\code{referenceAct_formula}, \code{referenceAct_isCPTP}.\\
+Lemma~\ref{lem:transform} & \code{StabilizedProofDom}:
+\code{dom_base}, \code{dom_range}, \code{dom_schur};
+\code{StabilizedProofChannelValue}: \code{transformer_le};
+\code{StabilizedProofAlpha}: \code{qform_integral},
+\code{transformer_alpha}, \code{Gp_conj_eq};
+\code{StabilizedProofAlphaChain}: \code{Gp_kron}, \code{Gp_self}.\\
+Lemma~\ref{lem:dp} & \code{ProofNonnegative}: \code{one_le_geometricMoment};
+\code{StabilizedProofAlphaMain}: \code{data_processing_alpha},
+\code{amortized_self_alpha}.\\
+Lemma~\ref{lem:cost} & \code{StabilizedProofAlphaMain}:
+\code{psd_of_trace_tests}, \code{cost_bound_alpha}.\\
+Comb and full action & \code{StabilizedProofComb}: \code{combJ},
+\code{combJ_psd}, \code{refAct_entry}, \code{amp_refAct};
+\code{StabilizedProofAlphaChain}: \code{chainS_alpha}.\\
+Lemma~\ref{lem:tester} & \code{StabilizedProofTester}: \code{Feasible},
+\code{tester_psd}, \code{trace_contrS}, \code{ptr_tester},
+\code{chain_trace_bound}.\\
+Proposition~\ref{prop:upper} & \code{StabilizedProofAlphaMain}:
+\code{moment_chain_alpha}, \code{amortized_le_alpha}.\\
+Lemma~\ref{lem:realize} & \code{StabilizedProofRealize}: \code{Data.link},
+\code{Data.rho_density}, \code{Data.JN_psd}, \code{Data.JN_marg},
+\code{Data.output}, \code{Data.KT'_mul_KT}, \code{Data.KT_mul_KT'};
+\code{StabilizedProofOrderTwo}: \code{exists_data};
+\code{StabilizedProofAlphaMain}: \code{realized_alpha}.\\
+Singular tester extension & \code{StabilizedProofOrderTwo}:
+\code{gammaStar_feasiblePD}, \code{pairing_le_of_PD}.\\
+Theorem and Corollary & \code{StabilizedProofAlphaMain}:
+\code{ordinary_le_amortized_alpha}, \code{regular_alpha},
+\code{collapse_alpha}, \code{referenceStabilizedMainStatement_holds};
+\code{StabilizedCollapse}: \code{referenceStabilized_collapse}.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The verification script rebuilds all 43 project modules in the import closure
+from the frozen sources into an initially empty directory. Its
+\code{LEAN_PATH} excludes existing project and critic proof caches. It checks
+the theorem's exact target, an independently written expansion of the outer
+optimization domains, and the reported axioms of the main theorem and five
+critical exports. The reported axiom set is
+\code{propext}, \code{Classical.choice}, and \code{Quot.sound}; no
+\code{sorryAx} occurs. It then replays the newly built closure using
+\code{leanchecker}, and verifies that the source hashes remain unchanged.
+The publication run passed these checks on the frozen source copy.
+
+The checked toolchain is Lean 4.34.1. Mathlib and Physlib are pinned to,
+respectively, revisions
+\begin{quote}\small\ttfamily
+d13f23b723b8a846827a245b89c10fc7d3f11612\\
+44c66d54be78db4693be9f8f92bd3b5ad124ed6f.
+\end{quote}
+Installed Lean and external package binaries were retained; the publication
+run checked their dependency source revisions and clean tracked sources but
+did not rebuild or replay the external packages. Kernel replay uses the
+installed Lean kernel, not a separately implemented verifier. These are the
+verification trust boundaries. Formal checking proves the encoded theorem;
+its correspondence with the physical question is established by the
+definitions and mathematical arguments above.
+
+\section{Contributions, AI disclosure, and availability}
+\textbf{Joint AI research and human role.} The result and its proofs were
+developed through joint work by GPT-6.1-Sol and Claude Opus 5.5 agents.
+Vin\'icius Mohr's role in the discovery was to direct the AI agents to attempt
+open problems listed on the Quantum Information and Quantum Computation Open
+Problem Zoo (\url{https://qiqc-op.com/}) using the \code{lean-orchestrator}
+repository (\url{https://github.com/vimohr/lean-orchestrator}), which was itself
+built using Claude Opus 5.5. The role assignments in \code{agents.toml} use
+GPT-6.1-Sol for the researcher, supervisor, literature, and triage agents, and
+Claude Opus 5.5 for the critic agent. The agents carried out mathematical
+exploration, Lean formalization, proof development, critical review, and
+literature searches. The critic also produced substantive proof material, as
+recorded below. Mohr subsequently requested verification and manuscript
+preparation.
+
+\textbf{Manuscript preparation.} GPT-6.1-Sol wrote this document, including the
+conventional proof exposition reconstructed from the formal sources.
+
+The registered theorem incorporates 16 modules ported from earlier local
+critic-agent proof material produced during iterations
+\code{e002-i01} and \code{e002-i02}. The registration wrapper applies that
+assembled proof; it does not constitute a second independently discovered
+proof. A later audit and the publication build checked its sources and
+interpretation independently of the original agent's acceptance verdict.
+The conventional proof in this manuscript was reconstructed from those
+sources. Mathematical ingredients from Fang--Fawzi and the physical
+realization theorem are credited separately above.
+
+\textbf{License.} This manuscript and the accompanying project source code and
+associated documentation are licensed under the MIT License. The source release
+contains the full license text in \code{LICENSE}. External dependencies retain
+their respective licenses.
+
+The local artifact accompanies this draft as \code{artifact/},
+\code{verify_artifact.py}, and the verification logs. Its source manifest
+records every module's SHA-256 hash. The availability statement should be
+updated with the permanent artifact archive and manuscript version when
+the authors arrange public release. Submission metadata,
+and any further human contribution or specialist review are recorded as
+pending in the accompanying preparation document; no external human
+review or public archival release is represented as completed here.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,21 @@
+/scratch/vimohr/lean_run/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.lean:295:12: warning: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Data.dR, hin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/scratch/vimohr/lean_run/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.lean:296:12: warning: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Data.dR, hin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/scratch/vimohr/lean_run/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/StabilizedProofRealize.lean:303:10: warning: This simp argument is unused:
+  Matrix.diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hne, hne']
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

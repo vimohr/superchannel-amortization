@@ -1,0 +1,79 @@
+Publication-plan implementation status, 5 October 2026
+Disclosure updated 7 October 2026 with the owner's account of his role.
+MIT License assigned 7 October 2026 to the manuscript and project source package.
+
+1. Preserve the audited result and fix scope: completed locally.
+   All 43 required project modules, Lake/toolchain manifests, source hashes,
+   verification procedure, logs, and provenance were frozen. Their hashes match
+   the prior audit. A separate copy was preserved in /tmp. Sections 1-2 of the
+   manuscript fix the exact source equations and independent reference domains.
+
+2. Novelty and contribution: completed as a bounded AI literature review.
+   literature.json and comparison.csv supplement the prior twelve-source audit.
+   The introduction identifies the tester completion/realization advance and
+   credits the channel formulas and transformer estimate. No "first proof"
+   claim is made. Forward citation search coverage and specialist assessment
+   remain incomplete; no exhaustive priority claim or expert endorsement is made.
+
+3. Conventional proof and model correspondence: completed.
+   manuscript.tex supplies all analytic, cost, contraction, completion,
+   realization, singular, and unsupported steps. It follows regular_alpha's
+   assembly using the ordinary value at r=c*a*b. It also supplies the independent
+   reference-absorption correspondence and a detailed Lean dictionary.
+
+4. External specialist review and venue assessment: pending.
+   No researcher was contacted because correspondence was not requested.
+   The AI mathematical review and fresh formal checks are recorded separately
+   from human review, scientific-priority assessment, and journal peer review.
+
+5. Reproducible artifact: local release prepared and checked.
+   verify_artifact.py has no hard-coded workspace location. It validates source
+   hashes, uses fresh project binaries, checks exact theorem type and allowed
+   axioms, and performs kernel replay. All external versions are pinned. The
+   publication verification/result.json records the executed outcome.
+   A full dependency rebuild and reproduction by another person in a genuinely
+   clean environment and permanent public archive ID remain pending. The MIT
+   License is assigned to the manuscript and project sources. Existing external
+   binaries were retained in this run.
+
+6. Contributions and proof provenance: requested attribution recorded.
+   The paper credits research and proofs to joint work by GPT-6.1-Sol and
+   Claude Opus 5.5 agents. Vinícius Mohr directed the agents to attempt problems
+   on https://qiqc-op.com/ using https://github.com/vimohr/lean-orchestrator,
+   which was built using Claude Opus 5.5. agents.toml assigns research,
+   supervision, literature, and triage to GPT-6.1-Sol, and the critic role to
+   Claude Opus 5.5. The critic also contributed substantive proof material.
+   Mohr initiated that automated research and subsequently requested
+   verification and manuscript preparation. GPT-6.1-Sol wrote the manuscript.
+   The disclosed AI role includes mathematical reasoning, formal code, review,
+   literature search, and manuscript preparation. Earlier local proof material
+   and its subsequent registration are identified accurately. Any additional
+   human contributors, rights, affiliations, and final author consent must be
+   resolved by the human author before submission.
+
+7. Manuscript and submission preparation: manuscript completed locally.
+   PDF, editable LaTeX, bibliography, formal artifact, source manifest, and logs
+   are included. LaTeX builds successfully; citations and cross-references are
+   resolved. The paper is a draft for review, not an asserted journal submission.
+   No journal was selected and no site, preprint, or submission was published.
+   Venue requirements should be checked once a venue and submission date are
+   selected. arXiv account eligibility, affiliation/contact metadata, permanent
+   archive reference and consent are still author tasks. The manuscript and
+   project source package are licensed under MIT.
+
+The requested mathematical assessment and publication drafting are complete.
+Outstanding human and public-release tasks do not represent missing proof steps.
+
+Standalone publication repository assembled, 7 October 2026
+
+The disclosure records joint GPT-6.1-Sol and Claude Opus 5.5 research and
+proof work, the inspected role assignments, GPT-6.1-Sol manuscript writing,
+and Claude Opus 5.5 development of lean-orchestrator. A role configuration
+snapshot, human checking guide, and Lean definition-printing entry point
+are included. All 43 copied proof sources retain their audited hashes.
+The copied package passed fresh compilation, exact target and axiom checks,
+and kernel replay. verification/2026-10-07/ records this run; its external
+dependency binaries were retained. The standalone LaTeX build succeeded
+without warnings, and the PDF text contains the corrected disclosure.
+Full clean dependency installation and public identifiers remain pending as
+described above. The manuscript and project source package are licensed under MIT.
