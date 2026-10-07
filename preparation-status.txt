@@ -118,3 +118,10 @@ and an unexpected axiom. This was local command validation; dependency
 installation and the workflow itself have not run on GitHub. The updated
 manuscript compiled without warnings, and its PDF text and layout were
 inspected. Publication manifests and source archives were regenerated.
+
+Manuscript date updated, 7 October 2026
+
+The current manuscript uses \today and its rebuilt PDF displays 7 October
+2026. The LaTeX build completed without warnings; extracted paper text matches
+the preceding version apart from the title-page date. Historical preparation
+and proof-verification dates remain recorded under their original dates.

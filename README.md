@@ -173,7 +173,8 @@ from its registration and subsequent checks.
 
 The public source repository is
 [vimohr/superchannel-amortization](https://github.com/vimohr/superchannel-amortization).
-The manuscript was prepared on 5 October 2026 and revised on 7 October 2026.
+The manuscript was first prepared on 5 October 2026; the current PDF is dated
+7 October 2026.
 The current metadata version is `1.0.0-draft`; no tagged archival release or
 DOI is claimed. The recommended publication setup uses two records: a
 GitHub-integrated **software artifact** and a separate **preprint** containing
