@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the manuscript listed under preferred-citation and the exact archived artifact version when available. The manuscript and PROVENANCE.md describe the AI contributions."
 type: software
 title: "Formal artifact for Amortization collapse for reference stabilized geometric Rényi superchannel divergences"
-version: "1.0.0"
+version: "1.0.1"
 license: MIT
 repository-code: "https://github.com/vimohr/superchannel-amortization"
 url: "https://github.com/vimohr/superchannel-amortization"

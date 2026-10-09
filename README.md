@@ -1,5 +1,7 @@
 # Amortization collapse for reference stabilized geometric Rényi superchannel divergences
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23262928.svg)](https://doi.org/10.5281/zenodo.23262928)
+
 For finite dimensional deterministic physical superchannels and every real
 order `1 < α ≤ 2`, the reference stabilized nested amortized geometric Rényi
 divergence equals the reference stabilized ordinary divergence.
@@ -8,6 +10,8 @@ divergence equals the reference stabilized ordinary divergence.
 [Review the definitions](HUMAN-CHECK.md) · [Public source repository](https://github.com/vimohr/superchannel-amortization)
 
 **Manuscript DOI:** [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121).
+
+**Formal artifact DOI (v1.0.1):** [10.5281/zenodo.23262928](https://doi.org/10.5281/zenodo.23262928).
 
 **Author:** Vinícius Mohr · [ORCID: 0009-0001-9239-5673](https://orcid.org/0009-0001-9239-5673).
 
@@ -150,7 +154,7 @@ proof; Section 8 maps its steps to Lean declarations.
 | [REVIEW.txt](REVIEW.txt), [preparation-status.txt](preparation-status.txt), [publication-plan.md](publication-plan.md) | Assessment and publication preparation records. |
 | [PROVENANCE.md](PROVENANCE.md), [provenance/agents-2026-10-07.toml](provenance/agents-2026-10-07.toml) | Contributions and inspected agent-role configuration. |
 | [CITATION.cff](CITATION.cff), [.zenodo.json](.zenodo.json) | GitHub citation and Zenodo software-release metadata. |
-| [RELEASE_NOTES.md](RELEASE_NOTES.md) | Prepared description for the first GitHub Release, `v1.0.0`. |
+| [RELEASE_NOTES.md](RELEASE_NOTES.md) | Release notes and software publication history. |
 | [LICENSE](LICENSE), [RIGHTS.txt](RIGHTS.txt) | MIT License and its scope; external dependencies retain their licenses. |
 | [release-manifest.json](release-manifest.json) | SHA-256 hashes of the assembled publication files. |
 
@@ -174,78 +178,52 @@ GPT-6.1-Sol wrote the manuscript. [PROVENANCE.md](PROVENANCE.md) and Section 9
 give the contribution account and distinguish earlier local proof material
 from its registration and subsequent checks.
 
-## Availability and Zenodo release procedure
+## Availability and archival records
 
 The public source repository is
 [vimohr/superchannel-amortization](https://github.com/vimohr/superchannel-amortization).
-The manuscript was first prepared on 5 October 2026; the current PDF is dated
-9 October 2026.
-The manuscript DOI is
-[10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121), supplied by
-the author on 7 October 2026. The software metadata is prepared as version
-**`1.0.0`**, for the GitHub tag **`v1.0.0`**. The tagged software archive and
-its DOI remain pending; preparing these files does not publish a release.
-The current files passed the local
-[9 October release checks](verification/2026-10-09-release/README.md), including
-fresh proof compilation and kernel replay, citation and Zenodo metadata
-validation, and a clean manuscript and bibliography build.
-This GitHub repository contains both the paper and the proof artifact.
-The recommended Zenodo setup uses two records: a
-GitHub-integrated **software artifact** and a separate **preprint** containing
-the final manuscript. This lets the paper cite an immutable proof snapshot.
 
-1. The paper identifier is already recorded in the manuscript and under
-   `preferred-citation` in `CITATION.cff`. `.zenodo.json` links the software
-   artifact to that paper DOI through `isSupplementTo`. Use the corresponding
-   Zenodo preprint draft for the final PDF upload in step 5.
-2. Link GitHub to Zenodo and enable this repository in Zenodo's GitHub settings
-   **before** publishing a release. Review `.zenodo.json` for the software
-   title, human creator, ORCID, ETH Zurich affiliation, MIT license, and AI disclosure.
-   Zenodo uses this file in preference to `CITATION.cff`; keep their shared
-   metadata consistent. Leave `doi` out of `.zenodo.json` so Zenodo assigns a
-   DOI to each new software version. `CITATION.cff`, `.zenodo.json`, and
-   `release-manifest.json` now all describe software version `1.0.0`.
-3. Review the prepared [release notes](RELEASE_NOTES.md) and the checks below.
-   Set the CFF release date when actually releasing. Rebuild the PDF if its
-   source changed, refresh the release file hashes, and commit and push the
-   reviewed files. Run the full verifier on that intended release commit
-   (locally or with CI's manual option), using a new output directory.
-4. Publish a GitHub Release for that tag after the checks pass. Zenodo archives
-   new published releases; a normal commit push or a tag alone is insufficient.
-   Use tag `v1.0.0` and title `v1.0.0 — Formal verification artifact`, with
-   the prepared release notes as the description.
-   Wait for processing, inspect the archived files and metadata, and copy the
-   **specific software-version DOI** into the paper's availability paragraph.
-   Retain the matching tag or commit there as an additional source locator.
-5. Rebuild and upload the final PDF to the paper's preprint draft, link the
-   software DOI there as `isSupplementedBy`, and publish the preprint. Update
-   the repository's availability links and CFF software DOI with the actual
-   identifiers. The manuscript copy in the first code archive may precede
-   this final DOI edit; the separately archived preprint is the final paper.
+The manuscript and formal verification artifact are archived separately on
+Zenodo:
 
-Zenodo also supplies a concept DOI covering all versions of a software record.
-Use the specific version DOI in the paper to identify the exact audited
-artifact. Later changes to archived files require a new version. The paper
-and software identifiers refer to different outputs; do not give both records
-the same DOI. Account linking and publishing are performed in the respective
-Zenodo and GitHub accounts.
+| Resource | Version-specific DOI |
+| --- | --- |
+| Manuscript | [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121) |
+| Formal verification artifact (`v1.0.1`) | [10.5281/zenodo.23262928](https://doi.org/10.5281/zenodo.23262928) |
 
-The official guides cover [enabling the integration](https://help.zenodo.org/docs/github/enable-repository/),
-[release archiving](https://help.zenodo.org/docs/github/archive-software/github-upload/),
-[metadata precedence](https://help.zenodo.org/docs/github/describe-software/),
-[reserving a manuscript DOI](https://help.zenodo.org/docs/deposit/describe-records/reserve-doi/),
-and [record versions](https://help.zenodo.org/docs/deposit/manage-versions/).
+Release [`v1.0.1`](https://github.com/vimohr/superchannel-amortization/releases/tag/v1.0.1)
+is the first version archived through the GitHub--Zenodo integration. It is
+substantively identical to the preceding GitHub release `v1.0.0`, which
+predates activation of the Zenodo integration.
 
-## Checks before tagging
+The software archive contains the Lean 4 proof closure, verification scripts,
+source manifests, audit records, recorded verification outputs, and
+documentation accompanying the manuscript. The version-specific software DOI
+identifies the archived artifact corresponding to this release.
 
-- Check that `CITATION.cff`, `.zenodo.json`, and `release-manifest.json` all
-  say `1.0.0`, and that the intended tag is `v1.0.0`. Update all three
-  version fields together for subsequent releases.
+The software record links to the manuscript through `isSupplementTo`. The
+manuscript record should reciprocally link to the software artifact through
+`isSupplementedBy`.
+
+The manuscript and software have separate DOIs because they are distinct
+research outputs. The version-specific software DOI should be used when
+referring to the exact archived verification artifact. Zenodo also provides
+a concept DOI for the software record covering its versions.
+
+Subsequent changes to the repository do not alter the archived `v1.0.1`
+snapshot. Changes requiring a new archived artifact should be published as
+a new software version.
+
+## Checks for subsequent releases
+
+- Update the software version consistently in `CITATION.cff`, `.zenodo.json`,
+  and `release-manifest.json`, and use the corresponding GitHub tag. Keep these
+  version fields synchronized for every subsequent release.
 - Check the human creator name, ORCID `0009-0001-9239-5673`, ETH Zurich
   affiliation, MIT license, manuscript DOI `10.5281/zenodo.23215121`, and
   the `isSupplementTo` link.
-  The manuscript DOI belongs to the paper. The software DOI is added after
-  the GitHub-integrated archive exists.
+  The manuscript DOI belongs to the paper. Each archived software version
+  receives its own version-specific DOI from Zenodo.
 - Review the release description's Eq. (39) scope, its Eq. (40) exclusion,
   and its AI/provenance statement against the manuscript and `PROVENANCE.md`.
 - Follow [VERIFY.md](VERIFY.md) to verify the intended release commit. All
@@ -286,12 +264,3 @@ manifest["assembled_utc"] = datetime.now(timezone.utc).isoformat()
 path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 PY
 ```
-
-For GitHub's About settings, the suggested description is “Lean 4 formal
-verification artifact for reference-stabilized geometric Rényi superchannel amortization collapse
-for 1 < α ≤ 2.” Suggested topics are `lean4`, `formal-verification`,
-`quantum-information`, `quantum-information-theory`, `renyi-divergence`,
-`superchannels`, `quantum-channels`, `theorem-proving`, and `mathlib`.
-These values are prepared for the repository owner's About settings; the
-local files do not change GitHub's About panel. Add DOI and passing CI badges
-when the corresponding archive and workflow results are available.
