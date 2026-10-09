@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-09T09:55:28.593034+00:00",
+  "metadata": {
+    "CITATION.cff": {
+      "passed": true,
+      "schema_version": "1.2.0",
+      "schema_url": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
+      "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+      "file_sha256": "bcbad2e50d1bb7b2b4195ddf6eefa387e4b498245d504b7609b4dd14a014c9a3",
+      "cffconvert_version": "2.0.0",
+      "cffconvert_exit_code": 0,
+      "cffconvert_log": "cff-validation.log"
+    },
+    ".zenodo.json": {
+      "passed": true,
+      "legacy_schema_core_fields_passed": true,
+      "legacy_schema_whole_file_passed": false,
+      "legacy_schema_unknown_fields": [
+        "language",
+        "version"
+      ],
+      "legacy_schema_sha256": "e275ddb915367510c4809db54b672fdd1fd31d133b55d9509eb2460022073562",
+      "legacy_schema_note": "The historical schema omits version and language; both are supported in the current official documentation and the pinned official importer.",
+      "official_documentation_url": "https://help.zenodo.org/docs/github/describe-software/zenodo-json/",
+      "pinned_official_importer_passed": true,
+      "importer_evidence": "zenodo-importer-validation.json",
+      "file_sha256": "cccb9e3ddbb10739d6cbaaa5ac1871bac945ec14c551c65e147b0dbeb4a7e66c",
+      "html_doi_link_passed": true
+    }
+  },
+  "shared_metadata_consistency_passed": true,
+  "software_doi_still_pending": true,
+  "paper_doi": "10.5281/zenodo.23215121",
+  "author_orcid": "https://orcid.org/0009-0001-9239-5673",
+  "remote_record_service_or_publication_test_performed": false
+}

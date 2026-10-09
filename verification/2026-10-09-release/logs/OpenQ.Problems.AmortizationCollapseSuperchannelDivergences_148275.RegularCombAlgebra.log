@@ -1,0 +1,19 @@
+/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/RegularCombAlgebra.lean:20:0: warning: automatically included section variable(s) unused in theorem `OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.regularComb_transformer_residual`:
+  [DecidableEq m]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/RegularCombAlgebra.lean:33:0: warning: automatically included section variable(s) unused in theorem `OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.regularComb_fullTranspose_pairing`:
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+/scratch/vimohr/lean_run/publication-repos/superchannel-amortization/artifact/lean/OpenQ/Problems/AmortizationCollapseSuperchannelDivergences_148275/RegularCombAlgebra.lean:39:0: warning: automatically included section variable(s) unused in theorem `OpenQ.Problems.AmortizationCollapseSuperchannelDivergences_148275.regularComb_completion_positive`:
+  [DecidableEq m]
+  [DecidableEq n]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq m] [DecidableEq n] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`

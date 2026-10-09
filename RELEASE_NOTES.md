@@ -39,6 +39,12 @@ external dependency binaries; external dependencies were not rebuilt or
 replayed. Formal checks and the mathematical interpretation of the definitions
 are distinct tasks, and external specialist review remains pending.
 
+The latest local verification on 9 October 2026 passed all 43 fresh project
+compilations, exact statement and axiom checks, and kernel replay. The
+manuscript and bibliography were rebuilt from source without final LaTeX
+warnings; citation and Zenodo metadata checks passed. The dated evidence is
+available through VERIFY.md.
+
 Vinícius Mohr initiated and directed the automated research. GPT-6.1-Sol and
 Claude Opus 5.5 agents jointly developed the research and proofs;
 GPT-6.1-Sol wrote the manuscript. The detailed contribution and AI disclosure

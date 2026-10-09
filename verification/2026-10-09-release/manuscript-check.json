@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-09T09:56:48.438246+00:00",
+  "warnings": [],
+  "clean_latex_and_bibtex_build": true,
+  "pages": 12,
+  "manuscript_date": "2026-10-09",
+  "title_page_visually_checked": true,
+  "title_page_orcid_checked": true,
+  "doi_checked": true,
+  "author_affiliation_checked": true,
+  "ai_attribution_present": true,
+  "text_unchanged_except_date": true,
+  "pdf_sha256": "d5921da3a1baf9fa57b576c68728d6ab7a81d4b32080b58353e3f4b8a9f7ffba",
+  "source_sha256": "7de6f9761939237adb4cdaf648336668bfa283bc461dd397751f2e7ff0c9809f",
+  "bibliography_source_sha256": "ec02af497626bc57bd242c622728732b946cc3eea9a7ea2c655769c3c30d0da4",
+  "bibliography_output_sha256": "b6e7ddb26f5e541eb19349b632c6794d6ccc8f16d351ace75b01625eb749ed88",
+  "build_log": "manuscript-build.log"
+}

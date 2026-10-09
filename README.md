@@ -179,12 +179,16 @@ from its registration and subsequent checks.
 The public source repository is
 [vimohr/superchannel-amortization](https://github.com/vimohr/superchannel-amortization).
 The manuscript was first prepared on 5 October 2026; the current PDF is dated
-7 October 2026.
+9 October 2026.
 The manuscript DOI is
 [10.5281/zenodo.23215121](https://doi.org/10.5281/zenodo.23215121), supplied by
 the author on 7 October 2026. The software metadata is prepared as version
 **`1.0.0`**, for the GitHub tag **`v1.0.0`**. The tagged software archive and
 its DOI remain pending; preparing these files does not publish a release.
+The current files passed the local
+[9 October release checks](verification/2026-10-09-release/README.md), including
+fresh proof compilation and kernel replay, citation and Zenodo metadata
+validation, and a clean manuscript and bibliography build.
 This GitHub repository contains both the paper and the proof artifact.
 The recommended Zenodo setup uses two records: a
 GitHub-integrated **software artifact** and a separate **preprint** containing

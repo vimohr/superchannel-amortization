@@ -216,3 +216,40 @@ after incorporating the new records and current metadata edits.
 The local tests do not represent a GitHub-hosted workflow, independent
 dependency bootstrap, remote Zenodo record-service test, or publication.
 External dependencies were not rebuilt or replayed.
+
+Manuscript rebuild and local Zenodo readiness, 9 October 2026
+
+The manuscript and bibliography were rebuilt from the current LaTeX and BibTeX
+sources in a clean temporary directory. The 12-page PDF is dated 9 October
+2026, with no final LaTeX warnings or bibliography errors. Its extracted text
+matches the prior PDF apart from the title-page date. Author, ORCID,
+affiliation, paper DOI, disclosure, PDF links, and title-page layout passed
+checks. No mathematical manuscript text or frozen Lean proof source changed.
+
+All 43 frozen project modules were freshly compiled using clean, pinned
+external dependency binaries. The exact closed theorem type, expanded
+statement, all six axiom reports, readable definition inspection, and installed
+Lean kernel replay passed. External dependencies were not rebuilt or replayed.
+
+CITATION.cff passed schema 1.2.0 and cffconvert. The complete .zenodo.json
+passed the unmodified official Zenodo deserializer pinned in the 7 October
+record. Shared version 1.0.0, creator, ORCID, affiliation, MIT license, and
+isSupplementTo paper DOI are consistent. The historical Zenodo schema's
+omission of version and language remains documented; both fields are supported
+by the current official guide and the pinned importer. No metadata correction
+was required. Local documentation links and workflow syntax passed, and the
+CI source-hash and axiom commands passed against the new audit.
+
+Text evidence is saved under verification/2026-10-09-release/. The current
+PDF date, verification links, and release file hashes were refreshed. The
+publication archive excludes Git metadata, dependency caches, temporary
+outputs, generated proof binaries, and common credential patterns.
+
+The files are prepared locally for the first software release. Committing
+and pushing this update, account integration, publishing GitHub Release
+v1.0.0, inspecting the software version DOI, and finalizing the separate
+manuscript deposit remain account steps. No remote record-service test,
+GitHub-hosted workflow, software DOI, or publication is claimed by this run.
+The author-provided paper DOI could not be confirmed through the web tool.
+External specialist review and independent dependency installation remain
+separate tasks, as described in VERIFY.md.

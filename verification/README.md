@@ -14,11 +14,18 @@ The same frozen proof sources are compiled into a new temporary output
 directory. The provider again supplies existing pinned external packages;
 the research workspace's project proof caches are excluded.
 
-[`2026-10-07-release/`](2026-10-07-release/README.md) records the latest full
+[`2026-10-07-release/`](2026-10-07-release/README.md) records the previous full
 run from the publication repository. All 43 project modules were freshly
 compiled, the exact type, expanded statement, and six axiom reports passed,
 and kernel replay passed. It also records CFF and Zenodo metadata validation,
 the manuscript rebuild, readable statement checks, and local CI checks.
+
+[`2026-10-09-release/`](2026-10-09-release/README.md) records the latest full
+run and local readiness checks for version `1.0.0`. All 43 project modules
+were freshly compiled, the statement and axiom checks and kernel replay
+passed, and the manuscript and bibliography were rebuilt from source.
+The PDF is dated 9 October 2026. Citation and Zenodo metadata, publication
+contents, and local documentation and workflow commands also passed.
 
 Each run contains `environment.json`, `builds.json`, `type_axioms.json`,
 `kernel_replay.json`, `result.json`, and the corresponding text logs.

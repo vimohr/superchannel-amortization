@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "checked_utc": "2026-10-09T10:02:22.093364+00:00",
+  "prepared_software_version": "1.0.0",
+  "intended_tag": "v1.0.0",
+  "base_commit": "d575d751d9d6460f938c9219344217999fbb21ba",
+  "current_publication_files_checked": true,
+  "manuscript_rebuilt": true,
+  "manuscript_pages": 12,
+  "manuscript_date": "2026-10-09",
+  "fresh_project_verification": {
+    "module_count": 43,
+    "fresh_source_build": true,
+    "exact_type_and_axioms": true,
+    "kernel_replay": true,
+    "source_unchanged": true,
+    "external_packages_rebuilt_or_replayed": false,
+    "frozen_artifact": true
+  },
+  "metadata_validation": "metadata-validation.json",
+  "local_documentation_links_checked": 94,
+  "local_documentation_links_passed": true,
+  "release_files_including_manifest": 372,
+  "tracked_files_covered": true,
+  "required_publication_files_present": true,
+  "generated_or_private_files_excluded": true,
+  "common_credential_patterns_found": false,
+  "account_integration_verified": false,
+  "remote_record_service_test_performed": false,
+  "github_hosted_workflow_run_performed": false,
+  "release_published": false,
+  "software_doi": null,
+  "paper_doi": "10.5281/zenodo.23215121",
+  "paper_public_record_confirmed": false,
+  "remaining_release_steps": [
+    "Set the CFF release date when publishing, refresh any affected release hashes, and commit and push the checked files.",
+    "Enable this GitHub repository in the Zenodo account before publishing the release.",
+    "Publish GitHub Release v1.0.0 using RELEASE_NOTES.md, inspect the archive, and record its software version DOI.",
+    "Finalize the separately identified manuscript record and its reciprocal software relation."
+  ]
+}
